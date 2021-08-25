@@ -52,12 +52,11 @@
       
     }
     #right img{
-        width: 98%;
+        width:100%;
     }
     #right div{
         border: 1px solid black;
-        padding:10px;
-     
+      padding: 5px;
         background-color: white;
     }
 </style>
@@ -215,41 +214,35 @@
 
                let p_price=document.createElement("p");
                p_price.innerText=`Rs ${product.price}`;
-
-
-              
-              
+  
                let div_btn=document.createElement("div")
                let cart_btn=document.createElement("button")
                cart_btn.innerHTML="Add to cart"
-               
-               cart_btn.setAttribute("style","display:none")
+               cart_btn.setAttribute("style","visibility:hidden")
 
                let div_img=document.createElement("div")
-              let p_image=document.createElement("img");
-              p_image.src=product.url;
-              div_img.append(p_image,cart_btn)
-               
+               let p_image=document.createElement("img");
+               p_image.src=product.url;
+               div_img.append(p_image,cart_btn)
 
-
-
-               div_img.onmouseover=function () {
-                   showCart(cart_btn)
-               }
-
-               let div_box=document.createElement("div")
-
-           
-               div_el.append(div_img,div_btn,p_name,p_price)
+              
+               p_image.addEventListener("mouseover",function () {
+                cart_btn.setAttribute("style","display:block;width:95%;height:30px")
+               });
+                p_image.addEventListener("mouseleave",function () {
+                cart_btn.setAttribute("style","visibility:hidden")
+               });
+                
+              
+               div_el.append(div_img,p_name,p_price)
                
                div_right.append(div_el)
                        
            })
+          
+       
        }
        showItems()
-        function showCart(btn){
-           btn.setAttribute("style","display:block")
-        }
        
 
 
