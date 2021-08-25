@@ -37,9 +37,6 @@
         width: 100%;
         display: grid;
         grid-template-columns:25% 65% ;
-        gap: 3%;
-      
-      
     }
     #left{
         border: 1px solid #B71C1C;
@@ -48,8 +45,8 @@
         font-weight: bolder;
         text-align: left;
         display:grid;
-        grid-template-columns: 30% 30% 30%;
-        gap: 1.5%;
+        grid-template-columns: 32% 32% 32%;
+        
         border: 1px solid #D81B60;
         padding: 10px;
       
@@ -60,6 +57,7 @@
     #right div{
         border: 1px solid black;
         padding:10px;
+     
         background-color: white;
     }
 </style>
@@ -203,38 +201,54 @@
         product_items=JSON.parse(product_items)
       
 
+        var i=0;
        function showItems() {
            var div_right=document.getElementById("right");
          
            product_items.forEach(function (product) {
                let div_el=document.createElement("div")
-
+            
+                div_el.setAttribute("Id",`id_${i}`)
+                   i++;
                let p_name=document.createElement("p");
                p_name.innerText=product.name;
 
                let p_price=document.createElement("p");
                p_price.innerText=`Rs ${product.price}`;
 
-               let p_image=document.createElement("img");
-               p_image.src=product.url;
 
-               p_image.onmouseover=function(){
-                   addCart(product)
+              
+              
+               let div_btn=document.createElement("div")
+               let cart_btn=document.createElement("button")
+               cart_btn.innerHTML="Add to cart"
+               
+               cart_btn.setAttribute("style","display:none")
+
+               let div_img=document.createElement("div")
+              let p_image=document.createElement("img");
+              p_image.src=product.url;
+              div_img.append(p_image,cart_btn)
+               
+
+
+
+               div_img.onmouseover=function () {
+                   showCart(cart_btn)
                }
 
-               div_el.append(p_image,p_name,p_price)
+               let div_box=document.createElement("div")
+
+           
+               div_el.append(div_img,div_btn,p_name,p_price)
                
                div_right.append(div_el)
-               
-              
-              
-               
+                       
            })
        }
        showItems()
-        function addCart(){
-            let cart_btn=document.createElement("button")
-            cart_btn.innerText="Add to cart"
+        function showCart(btn){
+           btn.setAttribute("style","display:block")
         }
        
 
