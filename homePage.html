@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
         <style>
             .basic{
                 padding: 16px;
@@ -22,19 +26,88 @@
             .main_div img{
                 max-width: 100%;
             }
+            .help{
+                float: right;
+                right: 0%;
+                top: 40%;
+                position: fixed;
+                margin: auto;
+                width: 75px;
+                height: 75px;
+                background-color: white;
+                box-sizing: border-box;
+                padding: 8px;
+                font-size: 70%;
+                text-align: center;
+                border-radius: 5%;
+                
+                box-shadow: 0px 0px 7px rgb(179, 178, 178);
+            }
+            .help_button{
+                width: 50%;
+                height: 50%;
+                margin: auto;
+                color: white;
+                background-color: black;
+                border-radius: 50%;
+                box-sizing: border-box;
+                font-size: 35px;
+                text-align: center;
+                line-height: 90%;
+                font-weight: 200;
+                margin-bottom: 5px;
+                
+            }
             .banner{
                 display: flex;
                 box-sizing: border-box;
                 max-width: 100%;
             }
             .slider{
+                overflow:hidden ;
                 max-width: 65%;
                 box-sizing: border-box;
-                padding: 16px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                
+            }
+            .move{
+                display: flex;
+                position: relative;
+                animation-name: example;
+                animation-duration: 10s;
+                animation-delay: 3s;
+                animation-iteration-count: infinite;
+                animation-direction:normal;
+                animation-timing-function:cubic-bezier(0.007, 1, 0, 1.001);
+                min-height: 100%;
+                width: 500%;
+                
             }
             .slider img{
-                max-width: 100%;
+                width: 20%;
                 min-height: 100%;
+                
+            }
+            @keyframes example{
+                0%{
+                    left: 0%;
+                }
+                20%{
+                    left: -100%;
+                }
+                40%{
+                    left: -200%;
+                }
+                60%{
+                    left: -300%;
+                }
+                80%{
+                    left: -400%;
+                }
+                100%{
+                    left: -500%;
+                }
             }
             .side_banner{
                 max-width: 35%;
@@ -128,8 +201,23 @@
     </head>
     <body>
         <div class="main_div">
+            <div class="help prod_bold">
+                <div class="help_button">
+                    +
+                </div>
+                Need Help Buying?
+            </div>
             <div class="banner">
-                <div class="slider"><img src="https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2x_20821_n.jpg" alt=""></div>
+                <div class="slider">
+                    <div class="move">
+                                    <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2x_20821_n.jpg" alt="">
+                                    <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB01_Web_1982021_2x.jpg" alt="">
+                                    <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB02_Web_1982021_2x.jpg" alt="">
+                                    <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB03_Web_1982021_2x.jpg" alt="">
+                                    <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB04_Web_1982021_2x.jpg" alt="">
+                                    <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2x_20821_n.jpg" alt="">
+                    </div>
+                </div>
                 <div class="side_banner">
                     <div class="side_banner_top"><img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Clouddio_RHS_2_20Aug21_2x.jpg" alt="Great mattress"></div>
                         <div class="side_banner_bottom"><img src="https://ii2.pepperfry.com/media/wysiwyg/banners/WEB_RHS_Recliner_2x_2421_n.png" alt="Recliner offer"></div>
