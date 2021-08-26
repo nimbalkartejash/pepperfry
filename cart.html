@@ -15,20 +15,24 @@
         width: 100%;
         text-align: center;
         word-spacing: 8px;
-        height:300px;
+        height:360px;
         border: 2px solid black;
         margin-bottom: 80px;
+        background-color: white;
     }
     #container{
+     
        margin-left: 35%;
        margin-right: 35%;
        display: grid;
        grid-template-columns: 50% 50%;
-       border: 1px solid #EF5350;   
+
+      background-color: #EEEEEE;
     }
     .box img{
-    width:80%;
-      border:3px  solid black;
+     width:98%;
+    margin-top: 2px;
+  
     }
     .box p{
         height: 5px;
@@ -38,10 +42,12 @@
         width: 100%;
         display: grid;
         gap: 2%;
-        grid-template-columns:28% 65% ;
+        grid-template-columns:28% 70% ;
+       
     }
     #left{
         border: 1px solid #B71C1C;
+        background-color: white;
     }
     #right{
         font-weight: bolder;
@@ -242,12 +248,35 @@
                div_el.append(div_img,p_name,p_price)
                
                div_right.append(div_el)
+
+               
+              cart_btn.onclick=function () {
+                  addtoCart(product);
+              }
                        
            })
           
        
        }
        showItems()
+        showItems()
+         if(localStorage.getItem("cart") ===null){
+            localStorage.setItem("cart",JSON.stringify([]));
+         }
+
+        var cart_data=JSON.parse(localStorage.getItem("cart"));
+
+       function addtoCart(p) {
+                if(cart_data.includes(p)){
+                     alert("Item is already in cart")
+                 }else{
+                     cart_data.push(p)
+                     alert("Added to cart")
+                 }
+            
+         localStorage.setItem("cart",JSON.stringify(cart_data))
+         
+         }
        
 
 
