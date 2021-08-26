@@ -16,18 +16,20 @@
         text-align: center;
         word-spacing: 8px;
         height:360px;
-        border: 2px solid black;
+     
         margin-bottom: 80px;
         background-color: white;
     }
     #container{
-     
        margin-left: 35%;
-       margin-right: 35%;
+       margin-right: 35%;   
+       background-color: #EEEEEE;
        display: grid;
        grid-template-columns: 50% 50%;
-
-      background-color: #EEEEEE;
+    }
+    .box{
+        margin: 1px;
+       
     }
     .box img{
      width:98%;
@@ -36,6 +38,7 @@
     }
     .box p{
         height: 5px;
+       
     }  
     #body_cont{
         text-align: center;
@@ -46,7 +49,7 @@
        
     }
     #left{
-        border: 1px solid #B71C1C;
+      
         background-color: white;
     }
     #right{
@@ -55,7 +58,7 @@
         display:grid;
         grid-template-columns: 32% 32% 32%;
         
-        border: 1px solid #D81B60;
+   
         padding: 10px;
       
     }
@@ -63,9 +66,13 @@
         width:100%;
     }
     #right div{
-        border: 1px solid black;
+     
       padding: 5px;
         background-color: white;
+    }
+    button
+    {
+        height: 30px;
     }
 </style>
 <body>
@@ -217,6 +224,7 @@
             
                 div_el.setAttribute("Id",`id_${i}`)
                    i++;
+                   div_el.setAttribute("style","margin:5px")
                let p_name=document.createElement("p");
                p_name.innerText=product.name;
 
@@ -226,6 +234,7 @@
                let div_btn=document.createElement("div")
                let cart_btn=document.createElement("button")
                cart_btn.innerHTML="Add to cart"
+               cart_btn.setAttribute("style","background-color:#FAFAFA;font-weight:bolder;")
                
                div_btn.append(cart_btn)
                div_btn.setAttribute("style","visibility:hidden")
@@ -238,7 +247,7 @@
                
 
                div_img.addEventListener("mouseover",function () {
-                div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:40px")
+                div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:42px;background-color:#FAFAFA")
                });
                 div_img.addEventListener("mouseleave",function () {
                 div_btn.setAttribute("style","visibility:hidden")
