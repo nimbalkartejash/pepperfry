@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +37,8 @@
         text-align: center;
         width: 100%;
         display: grid;
-        grid-template-columns:25% 65% ;
+        gap: 2%;
+        grid-template-columns:28% 65% ;
     }
     #left{
         border: 1px solid #B71C1C;
@@ -218,19 +220,22 @@
                let div_btn=document.createElement("div")
                let cart_btn=document.createElement("button")
                cart_btn.innerHTML="Add to cart"
-               cart_btn.setAttribute("style","visibility:hidden")
+               
+               div_btn.append(cart_btn)
+               div_btn.setAttribute("style","visibility:hidden")
 
                let div_img=document.createElement("div")
                let p_image=document.createElement("img");
                p_image.src=product.url;
-               div_img.append(p_image,cart_btn)
+               div_img.append(p_image,div_btn)
 
-              
-               p_image.addEventListener("mouseover",function () {
-                cart_btn.setAttribute("style","display:block;width:95%;height:30px")
+               
+
+               div_img.addEventListener("mouseover",function () {
+                div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:40px")
                });
-                p_image.addEventListener("mouseleave",function () {
-                cart_btn.setAttribute("style","visibility:hidden")
+                div_img.addEventListener("mouseleave",function () {
+                div_btn.setAttribute("style","visibility:hidden")
                });
                 
               
