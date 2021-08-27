@@ -287,7 +287,7 @@
                p_price.setAttribute("style","margin-left:10px;text-decoration:line-through;")
 
                let discount=document.createElement("span")
-               let discount_percentage=(Math.random()*30+10)
+               let discount_percentage=Math.floor((Math.random()*30+10))
                let discount_price=Math.floor((discount_percentage/100)*product.price)
                let net_price=Number(product.price)-discount_price;
                product["netPrice"]=net_price;
@@ -295,12 +295,22 @@
                discount.setAttribute("style","margin-left:5px;")
 
                let saving=document.createElement("p")
-               saving.innerHTML=`Save Rs ${discount_price}(40% Off),Limited Time Offer`
+               saving.innerHTML=`Save Rs ${discount_price}(${discount_percentage}% Off),Limited Time Offer`
                saving.setAttribute("style","color:#9E9E9E;margin:10px")
 
                let remarks=document.createElement("p")
                remarks.innerHTML=`Extra Cashback Worth Rs ${Math.floor(Math.random()*1000+3000)}`
                remarks.setAttribute("style","margin:10px;color:#304FFE")
+
+               let ship_box=document.createElement('div')
+               let ship_img=document.createElement("img");
+               ship_img.src="	https://ii1.pepperfry.com/images/svg/clip-exp-ship-icon-2018.svg"
+               ship_img.setAttribute("style","height:30px;width:30px;")
+               let shiping_day=document.createElement("div")
+               shiping_day.innerHTML="Ships in 2 days"
+
+               ship_box.append(ship_img,shiping_day)
+               ship_box.setAttribute("style","height:40px;display:grid;grid-template-columns:12% 88%;")
 
                
 
@@ -335,8 +345,8 @@
                });
               
                let details_div=document.createElement("div")
-               details_div.append(p_name,brand_box,price_box,saving,remarks)
-               details_div.setAttribute("style","position:relative;bottom:38px;")
+               details_div.append(p_name,brand_box,price_box,saving,remarks,ship_box)
+               details_div.setAttribute("style","position:relative;bottom:40px;margin-bottom:10px")
              
            
               
