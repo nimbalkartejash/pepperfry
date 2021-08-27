@@ -92,7 +92,19 @@
 
     </div>
     <div id="body_cont">
-        <div id="left"></div>
+        <div id="left">
+           <div class="fltered">
+              <h1>Filtered By:</h1>
+              <label >Sort by Price</label>
+              <select name="" id="price_filter">
+                 <option value="select">Select</option>
+                 <option value="HtoL">High To Low</option>
+                 <option value="LtoH">Low To High</option>
+               </select>
+               <button onclick="apply_changes()">Apply Changes</button>
+           </div>
+        </div>
+
         <div id="right"></div>
     </div>
 </body>
@@ -348,6 +360,9 @@
             
          localStorage.setItem("wishlist",JSON.stringify(wishlist_data))
          
+        }
+        function apply_changes(){
+           
         }
         
 </script>
