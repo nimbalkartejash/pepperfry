@@ -65,7 +65,6 @@
         width:100%;
     }
     #right div{
-     
       padding: 5px;
         background-color: white;
     }
@@ -249,12 +248,15 @@
          let product_items=localStorage.getItem("myProduct");
          product_items=JSON.parse(product_items)
       
+       localStorage.setItem("view_product",JSON.stringify([]));
 
+        
          var i=0;
          function showItems() {
            var div_right=document.getElementById("right");
          
-           product_items.forEach(function (product) {
+               product_items.forEach(function (product) {
+
                let div_el=document.createElement("div")
                 div_el.setAttribute("Id",`id_${i}`)
                  i++;
@@ -278,10 +280,35 @@
                brand_box.setAttribute("style","height:40px;display:grid;grid-template-columns:88% 12%;position:relative;bottom:60px;")
 
 
-               let p_price=document.createElement("p");
+              
+               let p_price=document.createElement("span");
                p_price.innerText=`Rs ${product.price}`;
-               p_price.setAttribute("style","margin-left:10px;position:relative;bottom:80px;")
-  
+               p_price.setAttribute("style","margin-left:10px;position:relative;bottom:80px;text-decoration:line-through;")
+
+               let discount=document.createElement("span")
+               let discount_percentage=(Math.random()*30+10)
+               let discount_price=Math.floor((discount_percentage/100)*product.price)
+               let net_price=Number(product.price)-discount_price;
+               product["netPrice"]=net_price;
+               discount.innerHTML=`Rs ${net_price}`;
+               discount.setAttribute("style","margin-left:5px;position:relative;bottom:80px")
+
+               let saving=document.createElement("p")
+               saving.innerHTML=`Save Rs ${discount_price}(40% Off),Limited Time Offer`
+               saving.setAttribute("style","color:#9E9E9E;position:relative;bottom:90px;margin:10px")
+
+               let remarks=document.createElement("p")
+               remarks.innerHTML=`Extra Cashback Worth Rs ${Math.floor(Math.random()*1000+3000)}`
+               remarks.setAttribute("style","position:relative;bottom:90px;margin:10px;color:#304FFE;margin-bottom:0px")
+
+               
+
+
+               let price_box=document.createElement("div")
+               price_box.append(discount,p_price)
+
+
+
                let div_btn=document.createElement("div")
                let cart_btn=document.createElement("button")
                cart_btn.innerHTML="Add to cart"
@@ -301,14 +328,21 @@
                 div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:38px;background-color:#FAFAFA;")
                });
                 div_img.addEventListener("mouseleave",function () {
-                      p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
+                p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
                 div_btn.setAttribute("style","visibility:hidden")
                });
-                
+
+             
+           
               
-               div_el.append(div_img,p_name,brand_box,p_price)
+               div_el.append(div_img,p_name,brand_box,price_box,saving,remarks)
                
                div_right.append(div_el)
+
+             
+         
+
+              
 
                
               cart_btn.onclick=function () {
@@ -326,6 +360,7 @@
        
         }
          showItems()
+         
     
          if(localStorage.getItem("cart") ===null){
             localStorage.setItem("cart",JSON.stringify([]));
@@ -361,8 +396,7 @@
          localStorage.setItem("wishlist",JSON.stringify(wishlist_data))
          
         }
-        function apply_changes(){
-           
-        }
+        console.log(product_items);
+        
         
 </script>
