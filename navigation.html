@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_font/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #container_child_1 {
+            padding: 15px 0;
+        }
+
+        .basic {
+            max-width: 1156px;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .float_left {
+            float: left;
+        }
+
+        .float_right {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .color_w {
+            color: white;
+        }
+
+
+        /*css for navigation bar*/
+
+        /*navigation_child_1 start*/
+
+
+        #navigation_child_1 {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+
+        #navigation_child_1>div:nth-child(1) {
+            max-width: 15.5709%;
+            margin-right: 2%;
+        }
+
+        #navigation_child_1>div>img {
+            width: 100%;
+        }
+
+        #navigation_child_1>div:nth-child(2) {
+            display: flex;
+            max-width: 82%;
+
+        }
+
+        #navigation_child_1>div:nth-child(2)>input {
+            width: 600px;
+            padding: 10px;
+            background-color: rgba(228, 225, 225, .5);
+            border-radius: 10px 0 0 10px;
+            border: 2px solid rgba(121, 127, 133, 0.5);
+            border-right: none;
+        }
+
+        #navigation_child_1>div:nth-child(2)>a {
+            font-size: 24px;
+            padding: 10px;
+            color: black;
+            background-color: rgba(228, 225, 225, .5);
+            border: 2px solid rgba(121, 127, 133, 0.5);
+            border-left: none;
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        .nav_child_1_pading {
+            padding: 5px;
+            text-align: center;
+            margin: 0px 10px;
+            color: black;
+
+        }
+
+        .deco {
+            text-decoration: none;
+            color: black;
+        }
+
+        /*navigation_child_1 end*/
+        #navigation_child_2 {
+            display: flex;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .flex_groth {
+            flex-grow: 1;
+            text-decoration: none;
+            list-style: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        #navigation {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            border: 1px solid white;
+        }
+
+        .back_color {
+            background-color: red;
+            height: 3px;
+            text-align: center;
+        }
+
+        .display_non {
+            display: none;
+        }
+
+        #navigation_child_2 li:hover .display_non {
+
+            display: block;
+        }
+
+        #navigation_child_2 li:hover {
+            font-weight: 900;
+        }
+
+
+        #Furniture{
+            position: relative;
+        }
+
+        /* login page css*/
+        #login{
+            width: 700px;
+            position: absolute;
+            top: 60%;
+            left: 30%;
+            background-color:white;
+            max-height: 512px;
+            display: flex;
+            box-shadow: 5px 0 10px rgba(128, 128, 128, .4);
+        }
+        #login > div:nth-child(1){
+            width: 300px;
+        }
+        #login > div:nth-child(1)>img{
+            width: 100%;
+        }
+        #login > div:nth-child(2){
+            padding: 40px;
+            
+        }
+        .log_margin{
+            margin-top: 20px;
+        }
+
+        /* profile css*/
+        #profile_drop{
+            position: absolute;
+            top: 45%;
+            left: 85%;
+            box-shadow: 5px 0 10px rgba(128, 128, 128, .4);
+            background-color: white;
+            max-width: 120px;
+            border: 4px solid rgba(187, 185, 185, .3);
+            border-top: none;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #profile_drop > p{
+            font-size: 12px;
+            margin-top: 10px;
+            text-align: left;
+            max-width: 90px;
+        }
+
+        #profile_drop > button{
+            font-size: 10px;
+            padding: 10px;
+            background-color: rgb(239, 102, 48);
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+        #profile_drop::before{
+            content: '';
+            position: absolute;
+            top: -12px;
+            right: 60px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
+            border: 2px solid rgba(179, 177, 177, .2);
+            border-bottom: none;
+            border-right: none;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <header id="container">
+        <div style="background-color: black;">
+            <div id="container_child_1" class="basic">
+                <p class="float_left color_w"><span style="color: #ffaf00;">Extra 40% Cashback on Everything Use Code
+                    </span> RAKHI</p>
+
+                <p class="float_right color_w"><span style="color: #ffaf00;">The Rakhi Sale | Up to 40% Off on
+                        Everything
+                    </span><a href="https://www.pepperfry.com/promotions.html" style="text-decoration: underline;">
+                        T&amp;C apply
+                    </a></p>
+                <p class="clear"></p>
+            </div>
+        </div>
+
+
+        <div id="navigation">
+            <div id="navigation_child_1" class="basic">
+                <div>
+                    <img src="data:image/png;base64,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"
+                        alt="">
+                </div>
+                <div>
+                    <input type="text" placeholder="Search" />
+                    <a href=""><i class="fas fa-search"></i></a>
+                    <div style="margin-left: 10px;" class="nav_child_1_pading">
+                        <a href="#" class="deco">
+                            <img src="https://ii1.pepperfry.com/images/svg/header-track-icon-2021.svg" alt="">
+                            <p>Track</p>
+                        </a>
+                    </div>
+                    <div class="nav_child_1_pading">
+                        <a href="" class="deco">
+                            <img src="https://ii1.pepperfry.com/images/svg/header-wishlist-icon-2021.svg" alt="">
+                            <p>Wishlist</p>
+                        </a>
+                    </div>
+                    <div class="nav_child_1_pading">
+                        <a href="" class="deco">
+                            <img src="https://ii1.pepperfry.com/images/svg/header-cart-icon-2021.svg" alt="">
+                            <p>Cart</p>
+                        </a>
+                    </div>
+                    <div class="nav_child_1_pading">
+                        <a href="" class="deco">
+                            <img src="	https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg" alt="">
+                            <div id="profile_button">
+                                <p>Profile</p>
+                                
+                            </div>
+                            
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+            <hr />
+            <div id="profile_drop">
+                <button id="log_regist"><h4>LOGIN / REGISTER</h4></button>
+                <p>To access your account & manage orders</p>
+            </div>
+
+
+            <script>
+                var item = document.getElementById('profile_drop');
+                item.style.display = "none"
+                var item2 = document.getElementById('profile_button');
+
+                
+                function hover_f(){
+                    item.style.display = "block"
+                }
+                
+                item2.addEventListener("mouseenter" , hover_f);
+
+                function hover_o(){
+                    item.style.display = "none"
+                }
+                item.addEventListener("mouseleave" , hover_o);
+            </script>
+
+
+
+            <div id="navigation_child_2" class="basic">
+
+                <a href="" class="flex_groth">
+                    <li> Furniture
+                        <div class="back_color display_non"></div>
+
+                    </li>
+
+
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Living
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Bedroom
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Kids Room
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Mattresses
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Furnishings
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Decor
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Lighting
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Appliances
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Modular Furniture
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+
+
+            </div>
+            <hr />
+            <div id="dropdown">
+                <div id="Furniture" class="display_no basic">power of the man</div>
+                <div id="Living" class="">this is another</div>
+                <div id="Bedroom" class=""></div>
+                <div id="Kids_Room" class=""></div>
+                <div id="Mattresses" class=""></div>
+                <div id="Furnishings" class=""></div>
+                <div id="Decor" class=""></div>
+                <div id="Lighting" class=""></div>
+                <div id="Appliances" class=""></div>
+                <div id="Modular_Furniture" class=""></div>
+            </div>
+
+
+         <div id="login">
+                <div>
+                    <img src="	https://ii1.pepperfry.com/media/wysiwyg/banners/Web_IMG_2x-reg.jpg" alt="">
+                </div>
+                <div>
+                    <form action="">
+                        <div class="log_margin">
+                            <label for="">Name</label><br>
+                            <input type="text">
+                        </div>
+                        <div class="log_margin" style="display: flex;">
+                            <div>
+                                <label for="">Mobile Number</label><br>
+                                <input type="number">
+                            </div>
+                            
+                            <div>
+                                <div class="home-reg-otp-initial">
+                                    <a href="" class="">Verify with OTP</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="log_margin">
+                            <label for="">Email ID</label><br>
+                            <input type="email">
+                        </div>
+                        <div class="log_margin">
+                            <label for="">Password</label><br>
+                            <input type="password">
+                        </div>
+                        <div class="log_margin">
+                            <button>REGISTER</button>
+                            
+                        </div>
+                        
+                    </form>
+                    
+                    <div>
+                        <span class="font-12 pf-text-dark-grey pf-center">By registering you agree to our <a href="https://www.pepperfry.com/terms-of-use.html" target="_BLANK" class="pf-text-underline">Terms &amp; Conditions</a></span>
+                    </div>
+                    <div>
+                        <button>Existing User? Log In</button>
+                    </div>
+                    
+                    <div>
+                        <span>OR Continue with</span>
+                        <img src="https://ii1.pepperfry.com/images/social_login_fb_2x.png" alt="">
+                        <img src="https://ii1.pepperfry.com/images/social_login_google_2x.png" alt="">
+                    </div>
+                </div>
+            </div>  
+
+            <script>
+                var login = document.getElementById("login");
+                login.style.display = "none";
+                var log_regist = document.getElementById("log_regist");
+                function display_content(){
+                    login.style.display = "flex";
+                }
+                log_regist.addEventListener("click" , display_content);
+                function non_display(){
+                    login.style.display = "none";
+                }
+                var check = document.getElementById("check")
+                check.addEventListener("click",non_display);
+            </script>
+
+        </div>
+
+        
+
+        <div id="check">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat fuga, mollitia
+            laudantium quidem eius pariatur, harum soluta rerum laboriosam nemo voluptates iure deserunt modi magnam.
+            Enim deleniti reiciendis numquam.</div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, ducimus a sunt quibusdam accusamus
+            dolorum sit suscipit. Possimus unde temporibus asperiores incidunt odit, qui esse aliquam, iusto eveniet
+            cumque ad est soluta modi molestiae veritatis, voluptas nisi libero error harum maiores doloremque. Ad
+            aliquid quibusdam qui at architecto? Perferendis id delectus nostrum. Architecto repellat cupiditate
+            recusandae mollitia eum vitae. Quia veritatis quos totam officia, placeat vel distinctio magni perspiciatis
+            aliquam et iure reprehenderit. Temporibus, sequi? Fuga autem porro libero aliquam illum, eligendi earum
+            dignissimos eum repellat unde. Laborum, reprehenderit illum. Doloribus quisquam quae modi adipisci suscipit
+            laudantium blanditiis, autem dolor sit officia dicta eos et, porro animi! Quisquam natus temporibus modi
+            fugit, quidem soluta blanditiis sed cupiditate. Et vitae, sequi tempore consequuntur nostrum a adipisci,
+            mollitia quibusdam voluptas omnis nesciunt. Obcaecati facere fugit excepturi doloribus neque aliquam
+            molestiae iste iure, recusandae molestias. Ipsam quo sed at accusantium officiis ab ea nobis ratione atque
+            nostrum. Impedit praesentium reiciendis et rem iure est maiores, incidunt nobis ad natus illum ab ut
+            sapiente nesciunt dolorum magnam quos sit molestias doloribus iusto ex facere ipsa id voluptatum. Sint
+            assumenda ut eos tempore nisi quisquam sunt distinctio aliquid illo repellendus, corrupti nemo, autem, esse
+            consectetur maxime vero asperiores nam quo! Error cum deserunt aperiam fugit quaerat odio rerum amet
+            doloremque? Aperiam dolorem saepe quibusdam ducimus ipsum accusamus molestiae earum, temporibus labore ab
+            velit, voluptate quae molestias, cum quia autem blanditiis! Inventore ipsam harum ut autem ipsa tenetur
+            dolore assumenda dolorum eveniet nihil quae, laudantium quaerat optio deleniti, itaque maiores alias labore
+            beatae tempora? Eius expedita magni vel excepturi perferendis numquam, iste aliquam eum, maxime eveniet
+            ratione similique labore facere ipsum saepe, debitis aliquid iure. Animi odit ullam asperiores perferendis,
+            voluptate non atque quasi. Fugiat culpa commodi magni dignissimos quas quae impedit corrupti veritatis, nisi
+            quod sed ratione cupiditate nihil. Soluta sint ea dignissimos totam consequuntur? Autem ratione nisi
+            perferendis fugiat optio distinctio, vitae inventore corrupti? Placeat, ex animi ullam totam quidem, dicta
+            dolore sint possimus non ducimus sed culpa mollitia beatae cupiditate saepe ab. Nobis deleniti sequi rerum
+            architecto amet nisi debitis iure hic aliquam, aspernatur soluta sapiente quia consequuntur facere non fuga
+            iusto adipisci dignissimos dolor harum sunt distinctio labore? Esse culpa beatae rerum dolor tenetur aperiam
+            quisquam quam? Laboriosam beatae esse expedita temporibus explicabo incidunt sit veritatis quas, cumque
+            repudiandae, aut illo magnam. Non, veniam! Excepturi quas accusantium, voluptatum tempore quasi, quam iure
+            necessitatibus maiores ipsa dolores, cupiditate consequatur qui quo eaque deleniti placeat. Repellendus
+            distinctio, quo ipsa sequi necessitatibus neque! Deserunt et ducimus magni doloremque, unde totam
+            perspiciatis in nihil, odio vero quae blanditiis sunt alias temporibus nulla deleniti consectetur, minus
+            aperiam architecto dicta eligendi. Sed autem labore adipisci numquam eligendi quia optio aspernatur?
+            Corporis beatae dolorem facere doloribus vel ad illo fugit porro provident quasi nemo, corrupti aspernatur
+            ab consectetur quis! Quia exercitationem unde eveniet mollitia, recusandae, amet ex earum id voluptatum
+            laborum ea sunt in voluptatem, enim doloremque delectus aspernatur aliquam atque? Explicabo, maxime qui
+            corporis officiis dolores reiciendis, itaque aliquam laborum suscipit harum quis aperiam illum commodi
+            perspiciatis mollitia veniam sunt repellendus beatae, voluptates necessitatibus. Consectetur pariatur earum
+            odio fugiat blanditiis, a iusto, similique ut modi eos magnam labore perferendis nam minus maxime? Nam at
+            autem quis. Autem, impedit! Eligendi delectus quo doloremque vero deserunt ex optio rerum. Vitae, autem rem
+            tempora reiciendis, sit quo fugit nulla repellat a asperiores itaque earum laborum consectetur dolorum,
+            deleniti iusto magnam tempore? Blanditiis sit, dolorem nihil numquam quidem voluptate debitis. Amet omnis
+            incidunt nam! Voluptas eveniet nobis nihil quos cumque accusamus eos consectetur, architecto eligendi, quo
+            et fugit modi qui nulla atque possimus deserunt sunt illum aliquam necessitatibus in. Laudantium, debitis
+            error quis a consectetur temporibus molestiae obcaecati fuga tempore! Deserunt ipsum unde aliquid a libero
+            provident vero dolorem magni minima nemo eius, consequuntur autem iure, obcaecati similique? Sit deserunt
+            ipsum dolorem? Tempora est nemo porro qui consequuntur natus error cumque rerum ullam doloribus praesentium
+            a inventore debitis neque eveniet fugiat rem officia ea, totam, suscipit itaque. Voluptate repudiandae
+            perferendis dolor magni quisquam minima natus quod eaque soluta saepe? Consectetur nobis, natus molestias
+            quasi accusantium modi laborum libero quisquam eius dolorem ipsum, voluptate quos praesentium porro fuga qui
+            molestiae nemo in veritatis deserunt omnis hic deleniti. Nesciunt nulla libero nostrum tempora consectetur
+            odio, asperiores maiores, consequatur adipisci doloribus facere, deserunt modi cumque obcaecati eum aliquid
+            dolores esse doloremque! Totam quam perferendis qui doloribus. Assumenda laboriosam neque dolores? Rerum
+            molestiae accusamus maiores deleniti, nobis facere, quibusdam magnam saepe veniam incidunt dolorem
+            laboriosam vero perferendis suscipit quo sapiente. Obcaecati aliquid beatae in iusto veniam. Veritatis qui
+            aperiam vero impedit consectetur dolores non, illo sed. Vitae quas soluta asperiores deleniti magnam, animi
+            amet laudantium neque? Iure aut quas quasi atque maxime temporibus, fugiat sapiente voluptate harum non
+            inventore hic excepturi commodi ea molestiae deserunt velit dolorem recusandae! Fugit eligendi amet nihil
+            cumque nobis, sit, quae blanditiis dolorum accusantium voluptas accusamus molestias. Neque repudiandae
+            expedita esse modi ut eius dolores, at qui, nihil unde pariatur, distinctio voluptate est blanditiis. Hic
+            cum dolorum odit delectus corrupti eum consectetur nam. Inventore tenetur corporis tempora dolorem animi.
+            Ab, ratione. Totam labore eius facilis at. Earum laudantium ab nesciunt hic modi commodi alias reiciendis
+            obcaecati ipsum, quasi amet placeat cum dolor quidem officiis facere quisquam, quo atque explicabo dolores
+            praesentium eos consectetur harum? Nostrum magni iure vel libero doloremque cum, corporis voluptatibus
+            maiores! Nisi tempore quam consequatur, eos sint sapiente rerum cumque magnam ipsum quas, est ex fuga atque
+            sequi minus deleniti repellendus similique maxime. Ad in incidunt vero ea quaerat ipsum ipsam error
+            praesentium eius amet dolores tempore aut eos soluta quam magni quod consectetur laborum, sunt non explicabo
+            placeat animi harum? Cumque facere totam voluptatum natus tempora eos nobis, at vitae perferendis autem
+            magnam expedita enim illo dolore impedit vel officiis fuga earum iusto, quae numquam? Nihil facilis
+            provident quasi totam. Culpa illum magni incidunt delectus officiis, ut saepe. Quod at reiciendis natus
+            repellat cupiditate doloribus praesentium necessitatibus vitae quidem esse, vero placeat quibusdam
+            voluptatum inventore perspiciatis repudiandae?</div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, ducimus a sunt quibusdam accusamus
+            dolorum sit suscipit. Possimus unde temporibus asperiores incidunt odit, qui esse aliquam, iusto eveniet
+            cumque ad est soluta modi molestiae veritatis, voluptas nisi libero error harum maiores doloremque. Ad
+            aliquid quibusdam qui at architecto? Perferendis id delectus nostrum. Architecto repellat cupiditate
+            recusandae mollitia eum vitae. Quia veritatis quos totam officia, placeat vel distinctio magni perspiciatis
+            aliquam et iure reprehenderit. Temporibus, sequi? Fuga autem porro libero aliquam illum, eligendi earum
+            dignissimos eum repellat unde. Laborum, reprehenderit illum. Doloribus quisquam quae modi adipisci suscipit
+            laudantium blanditiis, autem dolor sit officia dicta eos et, porro animi! Quisquam natus temporibus modi
+            fugit, quidem soluta blanditiis sed cupiditate. Et vitae, sequi tempore consequuntur nostrum a adipisci,
+            mollitia quibusdam voluptas omnis nesciunt. Obcaecati facere fugit excepturi doloribus neque aliquam
+            molestiae iste iure, recusandae molestias. Ipsam quo sed at accusantium officiis ab ea nobis ratione atque
+            nostrum. Impedit praesentium reiciendis et rem iure est maiores, incidunt nobis ad natus illum ab ut
+            sapiente nesciunt dolorum magnam quos sit molestias doloribus iusto ex facere ipsa id voluptatum. Sint
+            assumenda ut eos tempore nisi quisquam sunt distinctio aliquid illo repellendus, corrupti nemo, autem, esse
+            consectetur maxime vero asperiores nam quo! Error cum deserunt aperiam fugit quaerat odio rerum amet
+            doloremque? Aperiam dolorem saepe quibusdam ducimus ipsum accusamus molestiae earum, temporibus labore ab
+            velit, voluptate quae molestias, cum quia autem blanditiis! Inventore ipsam harum ut autem ipsa tenetur
+            dolore assumenda dolorum eveniet nihil quae, laudantium quaerat optio deleniti, itaque maiores alias labore
+            beatae tempora? Eius expedita magni vel excepturi perferendis numquam, iste aliquam eum, maxime eveniet
+            ratione similique labore facere ipsum saepe, debitis aliquid iure. Animi odit ullam asperiores perferendis,
+            voluptate non atque quasi. Fugiat culpa commodi magni dignissimos quas quae impedit corrupti veritatis, nisi
+            quod sed ratione cupiditate nihil. Soluta sint ea dignissimos totam consequuntur? Autem ratione nisi
+            perferendis fugiat optio distinctio, vitae inventore corrupti? Placeat, ex animi ullam totam quidem, dicta
+            dolore sint possimus non ducimus sed culpa mollitia beatae cupiditate saepe ab. Nobis deleniti sequi rerum
+            architecto amet nisi debitis iure hic aliquam, aspernatur soluta sapiente quia consequuntur facere non fuga
+            iusto adipisci dignissimos dolor harum sunt distinctio labore? Esse culpa beatae rerum dolor tenetur aperiam
+            quisquam quam? Laboriosam beatae esse expedita temporibus explicabo incidunt sit veritatis quas, cumque
+            repudiandae, aut illo magnam. Non, veniam! Excepturi quas accusantium, voluptatum tempore quasi, quam iure
+            necessitatibus maiores ipsa dolores, cupiditate consequatur qui quo eaque deleniti placeat. Repellendus
+            distinctio, quo ipsa sequi necessitatibus neque! Deserunt et ducimus magni doloremque, unde totam
+            perspiciatis in nihil, odio vero quae blanditiis sunt alias temporibus nulla deleniti consectetur, minus
+            aperiam architecto dicta eligendi. Sed autem labore adipisci numquam eligendi quia optio aspernatur?
+            Corporis beatae dolorem facere doloribus vel ad illo fugit porro provident quasi nemo, corrupti aspernatur
+            ab consectetur quis! Quia exercitationem unde eveniet mollitia, recusandae, amet ex earum id voluptatum
+            laborum ea sunt in voluptatem, enim doloremque delectus aspernatur aliquam atque? Explicabo, maxime qui
+            corporis officiis dolores reiciendis, itaque aliquam laborum suscipit harum quis aperiam illum commodi
+            perspiciatis mollitia veniam sunt repellendus beatae, voluptates necessitatibus. Consectetur pariatur earum
+            odio fugiat blanditiis, a iusto, similique ut modi eos magnam labore perferendis nam minus maxime? Nam at
+            autem quis. Autem, impedit! Eligendi delectus quo doloremque vero deserunt ex optio rerum. Vitae, autem rem
+            tempora reiciendis, sit quo fugit nulla repellat a asperiores itaque earum laborum consectetur dolorum,
+            deleniti iusto magnam tempore? Blanditiis sit, dolorem nihil numquam quidem voluptate debitis. Amet omnis
+            incidunt nam! Voluptas eveniet nobis nihil quos cumque accusamus eos consectetur, architecto eligendi, quo
+            et fugit modi qui nulla atque possimus deserunt sunt illum aliquam necessitatibus in. Laudantium, debitis
+            error quis a consectetur temporibus molestiae obcaecati fuga tempore! Deserunt ipsum unde aliquid a libero
+            provident vero dolorem magni minima nemo eius, consequuntur autem iure, obcaecati similique? Sit deserunt
+            ipsum dolorem? Tempora est nemo porro qui consequuntur natus error cumque rerum ullam doloribus praesentium
+            a inventore debitis neque eveniet fugiat rem officia ea, totam, suscipit itaque. Voluptate repudiandae
+            perferendis dolor magni quisquam minima natus quod eaque soluta saepe? Consectetur nobis, natus molestias
+            quasi accusantium modi laborum libero quisquam eius dolorem ipsum, voluptate quos praesentium porro fuga qui
+            molestiae nemo in veritatis deserunt omnis hic deleniti. Nesciunt nulla libero nostrum tempora consectetur
+            odio, asperiores maiores, consequatur adipisci doloribus facere, deserunt modi cumque obcaecati eum aliquid
+            dolores esse doloremque! Totam quam perferendis qui doloribus. Assumenda laboriosam neque dolores? Rerum
+            molestiae accusamus maiores deleniti, nobis facere, quibusdam magnam saepe veniam incidunt dolorem
+            laboriosam vero perferendis suscipit quo sapiente. Obcaecati aliquid beatae in iusto veniam. Veritatis qui
+            aperiam vero impedit consectetur dolores non, illo sed. Vitae quas soluta asperiores deleniti magnam, animi
+            amet laudantium neque? Iure aut quas quasi atque maxime temporibus, fugiat sapiente voluptate harum non
+            inventore hic excepturi commodi ea molestiae deserunt velit dolorem recusandae! Fugit eligendi amet nihil
+            cumque nobis, sit, quae blanditiis dolorum accusantium voluptas accusamus molestias. Neque repudiandae
+            expedita esse modi ut eius dolores, at qui, nihil unde pariatur, distinctio voluptate est blanditiis. Hic
+            cum dolorum odit delectus corrupti eum consectetur nam. Inventore tenetur corporis tempora dolorem animi.
+            Ab, ratione. Totam labore eius facilis at. Earum laudantium ab nesciunt hic modi commodi alias reiciendis
+            obcaecati ipsum, quasi amet placeat cum dolor quidem officiis facere quisquam, quo atque explicabo dolores
+            praesentium eos consectetur harum? Nostrum magni iure vel libero doloremque cum, corporis voluptatibus
+            maiores! Nisi tempore quam consequatur, eos sint sapiente rerum cumque magnam ipsum quas, est ex fuga atque
+            sequi minus deleniti repellendus similique maxime. Ad in incidunt vero ea quaerat ipsum ipsam error
+            praesentium eius amet dolores tempore aut eos soluta quam magni quod consectetur laborum, sunt non explicabo
+            placeat animi harum? Cumque facere totam voluptatum natus tempora eos nobis, at vitae perferendis autem
+            magnam expedita enim illo dolore impedit vel officiis fuga earum iusto, quae numquam? Nihil facilis
+            provident quasi totam. Culpa illum magni incidunt delectus officiis, ut saepe. Quod at reiciendis natus
+            repellat cupiditate doloribus praesentium necessitatibus vitae quidem esse, vero placeat quibusdam
+            voluptatum inventore perspiciatis repudiandae?</div>
+
+
+
+    </header>
+</body>
+
+</html>
