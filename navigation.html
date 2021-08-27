@@ -134,7 +134,6 @@
         }
 
         #navigation_child_2 li:hover .display_non {
-
             display: block;
         }
 
@@ -143,37 +142,127 @@
         }
 
 
-        #Furniture{
-            position: relative;
+        #dropdown {
+
+            background-color: white;
+            padding: 30px;
+            padding-top: 0;
+        }
+
+        #Furniture {
+            display: flex;
+            text-align: justify;
+        }
+
+        .Furniture_div {
+            flex-grow: 1;
+            padding-left: 15px;
+        }
+
+        .Furniture_color {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .Furniture_div>div>a {
+            text-decoration: none;
+            color: black;
+            margin-top: 10px;
+
+        }
+
+        .Furniture_div_a {
+            margin-top: 15px;
+        }
+
+        .item_a {
+            margin-top: 10px;
+        }
+
+        .Furniture_div>div>a:hover {
+            color: rgb(239, 102, 48);
+            font-weight: 900;
+        }
+
+        .drop_fur {
+            background-color: red;
+            height: 10px;
+            text-align: center;
         }
 
         /* login page css*/
-        #login{
+        #login {
             width: 700px;
             position: absolute;
             top: 60%;
             left: 30%;
-            background-color:white;
+            background-color: white;
             max-height: 512px;
             display: flex;
             box-shadow: 5px 0 10px rgba(128, 128, 128, .4);
         }
-        #login > div:nth-child(1){
+
+        #login>div:nth-child(1) {
             width: 300px;
         }
-        #login > div:nth-child(1)>img{
+
+        #login>div:nth-child(1)>img {
             width: 100%;
         }
-        #login > div:nth-child(2){
-            padding: 40px;
-            
-        }
-        .log_margin{
-            margin-top: 20px;
+
+        #login>div:nth-child(2) {
+            padding: 5px;
+            padding-left: 40px;
+
         }
 
+        .log_input {
+
+            width: 80%;
+            font-size: 15px;
+            padding: 10px 5px;
+        }
+
+        .log_lable {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .log_margin {
+            margin-top: 10px;
+        }
+
+        .log_cancel {
+            margin-left: 300px;
+        }
+
+        .log_logo {
+            width: 25px;
+            margin: 10px;
+        }
+
+        .log_register {
+
+            background-color: rgb(239, 102, 48);
+            border: none;
+            width: 85%;
+            padding: 10px 0px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .log_exist {
+            width: 85%;
+            padding: 10px 0px;
+            color: rgb(239, 102, 48);
+            background-color: white;
+            margin-top: 30px;
+        }
+
+
         /* profile css*/
-        #profile_drop{
+        #profile_drop {
             position: absolute;
             top: 45%;
             left: 85%;
@@ -186,14 +275,14 @@
             padding: 10px;
         }
 
-        #profile_drop > p{
+        #profile_drop>p {
             font-size: 12px;
             margin-top: 10px;
             text-align: left;
             max-width: 90px;
         }
 
-        #profile_drop > button{
+        #profile_drop>button {
             font-size: 10px;
             padding: 10px;
             background-color: rgb(239, 102, 48);
@@ -201,7 +290,8 @@
             border: none;
             margin-top: 10px;
         }
-        #profile_drop::before{
+
+        #profile_drop::before {
             content: '';
             position: absolute;
             top: -12px;
@@ -214,8 +304,45 @@
             border-bottom: none;
             border-right: none;
         }
-        
-        
+
+        #profile_drop2 {
+            position: absolute;
+            top: 45%;
+            left: 86%;
+            box-shadow: 5px 0 10px rgba(128, 128, 128, .4);
+            background-color: white;
+            max-width: 120px;
+            border: 4px solid rgba(187, 185, 185, .3);
+            border-top: none;
+            text-align: left;
+            padding: 10px;
+            font-size: 15px;
+
+        }
+
+        .profile_drop2_a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #profile_drop2::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            right: 40px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
+            border: 2px solid rgba(179, 177, 177, .2);
+            border-bottom: none;
+            border-right: none;
+        }
+
+        .profile_drop2_div {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -268,9 +395,9 @@
                             <img src="	https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg" alt="">
                             <div id="profile_button">
                                 <p>Profile</p>
-                                
+
                             </div>
-                            
+
                         </a>
                     </div>
 
@@ -279,35 +406,40 @@
             </div>
             <hr />
             <div id="profile_drop">
-                <button id="log_regist"><h4>LOGIN / REGISTER</h4></button>
+                <button id="log_regist">
+                    <h4>LOGIN / REGISTER</h4>
+                </button>
                 <p>To access your account & manage orders</p>
             </div>
 
-
-            <script>
-                var item = document.getElementById('profile_drop');
-                item.style.display = "none"
-                var item2 = document.getElementById('profile_button');
-
-                
-                function hover_f(){
-                    item.style.display = "block"
-                }
-                
-                item2.addEventListener("mouseenter" , hover_f);
-
-                function hover_o(){
-                    item.style.display = "none"
-                }
-                item.addEventListener("mouseleave" , hover_o);
-            </script>
-
-
+            <div id="profile_drop2">
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h4>Hi Man</h4>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h4>My Account</h4>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h4>My Order</h4>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h4>My Wishlist</h4>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h4>My Wollet</h4>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h4>My Profile</h4>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h4>Logout</h4>
+                    </a></div>
+            </div>
 
             <div id="navigation_child_2" class="basic">
 
                 <a href="" class="flex_groth">
-                    <li> Furniture
+                    <li id="li_furniture"> Furniture
                         <div class="back_color display_non"></div>
 
                     </li>
@@ -363,9 +495,112 @@
 
             </div>
             <hr />
+            <!-- this is one -->
             <div id="dropdown">
-                <div id="Furniture" class="display_no basic">power of the man</div>
-                <div id="Living" class="">this is another</div>
+                <div id="Furniture" class="basic">
+                    <div class="Furniture_div">
+                        <h3>Sofas</h3>
+                        <div class="Furniture_div_a"><a href="">Sofas</a></div>
+                        <div class="item_a"><a href="">1 Seater Sofas</a></div>
+                        <div class="item_a"><a href="">2 Seater Sofas</a></div>
+                        <div class="item_a"><a href="">3 Seater Sofas</a></div>
+                        <div class="item_a"><a href="">Sofa Sets</a></div>
+                        <div class="item_a"><a href="">Sectional Sofas</a></div>
+                        <div class="item_a"><a href="">Sofa Cum Beds</a></div>
+                        <div class="item_a"><a href="">Recliners</a></div>
+                        <div class="item_a"><a href="">Futons</a></div>
+                        <div class="item_a"><a href="">Sofa Spa</a></div>
+                    </div>
+                    <div class="Furniture_div Furniture_color">
+                        <h3>Seating</h3>
+                        <div class="Furniture_div_a"><a href="">Settees</a></div>
+                        <div class="item_a"><a href="">Benches</a></div>
+                        <div class="item_a"><a href="">Chaise Loungers</a></div>
+                        <div class="item_a"><a href="">Recamiers</a></div>
+                        <div class="item_a"><a href="">Ottomans</a></div>
+                        <div class="item_a"><a href="">Pouffes</a></div>
+                        <div class="item_a"><a href="">Foot Stools</a></div>
+                        <div class="item_a"><a href="">Seating Stools</a></div>
+                        <div class="item_a"><a href="">Bean Bags</a></div>
+                        <div class="item_a"><a href="">Swings</a></div>
+                        <div class="item_a"><a href="">Hammocks</a></div>
+                    </div>
+                    <div class="Furniture_div">
+                        <h3>Chairs</h3>
+                        <div class="Furniture_div_a"><a href="">Arm Chair</a></div>
+                        <div class="item_a"><a href="">Rocking Chairs</a></div>
+                        <div class="item_a"><a href="">Lounge Chairs</a></div>
+                        <div class="item_a"><a href="">Cafe Chairs</a></div>
+                        <div class="item_a"><a href="">Iconic Chairs</a></div>
+                        <div class="item_a"><a href="">Slipper Chairs</a></div>
+                        <div class="item_a"><a href="">Barrel Chairs</a></div>
+                        <div class="item_a"><a href="">Chuntilever Chairs</a></div>
+                        <div class="item_a"><a href="">Folding Chairs</a></div>
+                        <div class="item_a"><a href="">Plastic Chairs</a></div>
+                        <div class="item_a"><a href="">Wing Chairs</a></div>
+                        <div class="item_a"><a href="">Office Chairs</a></div>
+                        <div class="item_a"><a href="">Patio Chairs</a></div>
+                    </div>
+                    <div class="Furniture_div Furniture_color">
+                        <h3>Tables</h3>
+                        <div class="Furniture_div_a"><a href="">Coffee Tables</a></div>
+                        <div class="item_a"><a href="">Coffee Tables Sets</a></div>
+                        <div class="item_a"><a href="">End Tables</a></div>
+                        <div class="item_a"><a href="">Nest of Tables</a></div>
+                        <div class="item_a"><a href="">Console Tables</a></div>
+                        <div class="item_a"><a href="">Portable Tables</a></div>
+                        <div class="item_a"><a href="">Study Tables</a></div>
+                        <div class="item_a"><a href="">Dressing Tables</a></div>
+                        <div class="item_a"><a href="">Bedside Tables</a></div>
+                        <div class="item_a"><a href="">Office Tables</a></div>
+                        <div class="item_a"><a href="">Patio Tables & Sets</a></div>
+
+                    </div>
+                    <div class="Furniture_div">
+                        <h3>Cabinetry</h3>
+                        <div class="Furniture_div_a"><a href="">Shoe Racks</a></div>
+                        <div class="item_a"><a href="">Entertainment Units</a></div>
+                        <div class="item_a"><a href="">Cabinets</a></div>
+                        <div class="item_a"><a href="">Sideboards</a></div>
+                        <div class="item_a"><a href="">hutch Cabinates</a></div>
+                        <div class="item_a"><a href="">Chest of Drawers</a></div>
+                        <div class="item_a"><a href="">Book Cases</a></div>
+                        <div class="item_a"><a href="">Trunks</a></div>
+                        <div class="item_a"><a href="">Wardrobes</a></div>
+                        <div class="item_a"><a href="">Modular Wardrobes</a></div>
+                        <div class="item_a"><a href="">Plastic Cabinets</a></div>
+                        <div class="item_a"><a href="">Office Cabinets</a></div>
+                    </div>
+                    <div class="Furniture_div Furniture_color">
+                        <h3>Dining & Bar</h3>
+                        <div class="Furniture_div_a"><a href="">Dining Sets</a></div>
+                        <div class="item_a"><a href="">Dining Chairs</a></div>
+                        <div class="item_a"><a href="">Dining Chairs</a></div>
+                        <div class="item_a"><a href="">Bar Cabinets</a></div>
+                        <div class="item_a"><a href="">Bar Units</a></div>
+                        <div class="item_a"><a href="">Bar Trolleys</a></div>
+                        <div class="item_a"><a href="">Wine Rocks</a></div>
+                        <div class="item_a"><a href="">Bar Stools</a></div>
+                        <div class="item_a"><a href="">Bar Table Sets</a></div>
+                        <div class="item_a"><a href="">Modular Kitchens</a></div>
+                    </div>
+                    <div class="Furniture_div">
+                        <h3>Beds</h3>
+                        <div class="Furniture_div_a"><a href="">Beds</a></div>
+                        <div class="item_a"><a href="">Single Beds</a></div>
+                        <div class="item_a"><a href="">Queen Size Beds</a></div>
+                        <div class="item_a"><a href="">King Size Beds</a></div>
+                        <div class="item_a"><a href="">Uphoslstered Beds</a></div>
+                        <div class="item_a"><a href="">Poster Beds</a></div>
+                        <div class="item_a"><a href="">Bank Beds</a></div>
+                        <div class="item_a"><a href="">Trundle Beds</a></div>
+                        <div class="item_a"><a href="">Folding Beds</a></div>
+                        <div class="item_a"><a href="">Mattresses</a></div>
+                    </div>
+                </div>
+                <div id="Living" class="">
+
+                </div>
                 <div id="Bedroom" class=""></div>
                 <div id="Kids_Room" class=""></div>
                 <div id="Mattresses" class=""></div>
@@ -377,22 +612,26 @@
             </div>
 
 
-         <div id="login">
+
+            <div id="login">
                 <div>
                     <img src="	https://ii1.pepperfry.com/media/wysiwyg/banners/Web_IMG_2x-reg.jpg" alt="">
                 </div>
                 <div>
+                    <div class="log_cancel"><i class="far fa-2x fa-window-close" id="log_cancel"></i></div>
                     <form action="">
                         <div class="log_margin">
-                            <label for="">Name</label><br>
-                            <input type="text">
+                            <label for="name" class="log_lable">Name</label><br>
+                            <input type="text" name="name" autocomplete="off" required class="log_input">
+
+
                         </div>
                         <div class="log_margin" style="display: flex;">
                             <div>
                                 <label for="">Mobile Number</label><br>
-                                <input type="number">
+                                <input type="number" class="log_input">
                             </div>
-                            
+
                             <div>
                                 <div class="home-reg-otp-initial">
                                     <a href="" class="">Verify with OTP</a>
@@ -401,57 +640,136 @@
                         </div>
                         <div class="log_margin">
                             <label for="">Email ID</label><br>
-                            <input type="email">
+                            <input type="email" class="log_input">
                         </div>
                         <div class="log_margin">
                             <label for="">Password</label><br>
-                            <input type="password">
+                            <input type="password" class="log_input">
                         </div>
                         <div class="log_margin">
-                            <button>REGISTER</button>
-                            
+                            <button class="log_register">REGISTER</button>
+
                         </div>
-                        
+
                     </form>
-                    
+
                     <div>
-                        <span class="font-12 pf-text-dark-grey pf-center">By registering you agree to our <a href="https://www.pepperfry.com/terms-of-use.html" target="_BLANK" class="pf-text-underline">Terms &amp; Conditions</a></span>
+                        <span class="font-12 pf-text-dark-grey pf-center">By registering you agree to our <a
+                                href="https://www.pepperfry.com/terms-of-use.html" target="_BLANK"
+                                class="pf-text-underline">Terms &amp; Conditions</a></span>
                     </div>
                     <div>
-                        <button>Existing User? Log In</button>
+                        <button class="log_exist">Existing User? Log In</button>
                     </div>
-                    
+
                     <div>
-                        <span>OR Continue with</span>
-                        <img src="https://ii1.pepperfry.com/images/social_login_fb_2x.png" alt="">
-                        <img src="https://ii1.pepperfry.com/images/social_login_google_2x.png" alt="">
+                        <span>OR Continue with</span><a href="" id="facebook">
+                            <img class="log_logo" src="https://ii1.pepperfry.com/images/social_login_fb_2x.png"
+                                alt=""></a>
+                        <a href="" id="google">
+                            <img class="log_logo" src="https://ii1.pepperfry.com/images/social_login_google_2x.png"
+                                alt="">
+                        </a>
                     </div>
                 </div>
-            </div>  
+            </div>
 
+            <!-- pop script -->
+            <script>
+
+                var profile_drop2 = document.getElementById("profile_drop2");
+                profile_drop2.style.display = "none";
+
+
+                var item2 = document.getElementById('profile_button');
+                
+
+
+
+                var logo = document.getElementById("facebook");
+                function login1() {
+                    var it = "something";
+                    localStorage.setItem("login", it);
+                    login.style.display = "none";
+                }
+                logo.addEventListener("click", login1);
+
+                var storage_item = localStorage.getItem("login");
+
+                
+                var item = document.getElementById('profile_drop');
+                item.style.display = "none"
+
+
+                if (storage_item != null) {
+                    function dis_play(){
+                        profile_drop2.style.display = "block";
+                    }
+                    item2.addEventListener("mouseenter", dis_play);
+                    function non_dis_play(){
+                        profile_drop2.style.display ="none"
+                    }
+                    profile_drop2.addEventListener("mouseleave", non_dis_play);
+                    
+
+                } else {
+                
+
+                function hover_f() {
+                    item.style.display = "block"
+                }
+                item2.addEventListener("mouseenter", hover_f);
+
+                function hover_o() {
+                    item.style.display = "none"
+                }
+                item.addEventListener("mouseleave", hover_o);
+                }
+
+                
+
+
+            </script>
+
+            <!-- login script -->
             <script>
                 var login = document.getElementById("login");
                 login.style.display = "none";
                 var log_regist = document.getElementById("log_regist");
-                function display_content(){
+                function display_content() {
                     login.style.display = "flex";
                 }
-                log_regist.addEventListener("click" , display_content);
-                function non_display(){
+                log_regist.addEventListener("click", display_content);
+                var log_cancel = document.getElementById("log_cancel");
+                function log_can() {
                     login.style.display = "none";
                 }
-                var check = document.getElementById("check")
-                check.addEventListener("click",non_display);
+                log_cancel.addEventListener("click", log_can);
+            </script>
+            <!-- furniture cript -->
+            <script>
+                var Furniture = document.getElementById("Furniture");
+                Furniture.style.display = "none"
+                function Furniture_hover() {
+                    Furniture.style.display = "flex";
+                }
+                function Furniture_leave() {
+                    Furniture.style.display = "none";
+                }
+
+                var li_furniture = document.getElementById("li_furniture")
+                li_furniture.addEventListener("mouseenter", Furniture_hover);
+
+                Furniture.addEventListener("mouseleave", Furniture_leave);
+
+
             </script>
 
+
+
+
+
         </div>
-
-        
-
-        <div id="check">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat fuga, mollitia
-            laudantium quidem eius pariatur, harum soluta rerum laboriosam nemo voluptates iure deserunt modi magnam.
-            Enim deleniti reiciendis numquam.</div>
-        
 
 
 
