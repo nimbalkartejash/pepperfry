@@ -67,6 +67,7 @@
     #right div{
       padding: 5px;
         background-color: white;
+        
     }
     button
     {
@@ -264,7 +265,7 @@
 
                let p_name=document.createElement("p");
                p_name.innerText=product.name;
-               p_name.setAttribute("style","margin-left:10px;position:relative;bottom:45px;")
+               p_name.setAttribute("style","margin-left:10px")
 
                 let brand_box=document.createElement("div")
                let brand=document.createElement("div")
@@ -277,13 +278,13 @@
                wishlist_btn.setAttribute("style","height:30px;width:30px;position:relative;bottom:4px;")
                wish_box.append(wishlist_btn)
                brand_box.append(brand,wish_box)
-               brand_box.setAttribute("style","height:40px;display:grid;grid-template-columns:88% 12%;position:relative;bottom:60px;")
+               brand_box.setAttribute("style","height:40px;display:grid;grid-template-columns:88% 12%;")
 
 
               
                let p_price=document.createElement("span");
                p_price.innerText=`Rs ${product.price}`;
-               p_price.setAttribute("style","margin-left:10px;position:relative;bottom:80px;text-decoration:line-through;")
+               p_price.setAttribute("style","margin-left:10px;text-decoration:line-through;")
 
                let discount=document.createElement("span")
                let discount_percentage=(Math.random()*30+10)
@@ -291,15 +292,15 @@
                let net_price=Number(product.price)-discount_price;
                product["netPrice"]=net_price;
                discount.innerHTML=`Rs ${net_price}`;
-               discount.setAttribute("style","margin-left:5px;position:relative;bottom:80px")
+               discount.setAttribute("style","margin-left:5px;")
 
                let saving=document.createElement("p")
                saving.innerHTML=`Save Rs ${discount_price}(40% Off),Limited Time Offer`
-               saving.setAttribute("style","color:#9E9E9E;position:relative;bottom:90px;margin:10px")
+               saving.setAttribute("style","color:#9E9E9E;margin:10px")
 
                let remarks=document.createElement("p")
                remarks.innerHTML=`Extra Cashback Worth Rs ${Math.floor(Math.random()*1000+3000)}`
-               remarks.setAttribute("style","position:relative;bottom:90px;margin:10px;color:#304FFE;margin-bottom:0px")
+               remarks.setAttribute("style","margin:10px;color:#304FFE")
 
                
 
@@ -321,21 +322,25 @@
                let p_image=document.createElement("img");
                p_image.src=product.url;
                div_img.append(p_image,div_btn)
+               div_img.setAttribute("style","margin:10px;overflow:hidden")
 
 
                div_img.addEventListener("mouseover",function () {
-                   p_image.setAttribute("style","transform:scale(1.06)")
+                   p_image.setAttribute("style","transform:scale(1.12)")
                 div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:38px;background-color:#FAFAFA;")
                });
                 div_img.addEventListener("mouseleave",function () {
                 p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
                 div_btn.setAttribute("style","visibility:hidden")
                });
-
+              
+               let details_div=document.createElement("div")
+               details_div.append(p_name,brand_box,price_box,saving,remarks)
+               details_div.setAttribute("style","position:relative;bottom:38px;")
              
            
               
-               div_el.append(div_img,p_name,brand_box,price_box,saving,remarks)
+               div_el.append(div_img,details_div)
                
                div_right.append(div_el)
 
