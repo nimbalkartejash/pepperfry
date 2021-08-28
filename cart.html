@@ -6,10 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
 </head>
 <style>
     body{
         background-color: #EEEEEE;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 13px;
     }
     #header{
         width: 100%;
@@ -46,17 +59,19 @@
         display: grid;
         gap: 2%;
         grid-template-columns:28% 70% ;
+      
        
     }
     #left{
-      
         background-color: white;
+          margin-left:80px;
+          margin-top: 3px;
     }
     #right{
         font-weight: bolder;
         text-align: left;
         display:grid;
-        grid-template-columns: 32% 32% 32%;
+        grid-template-columns: 33% 33% 33%;
         
       
       
@@ -69,10 +84,20 @@
         background-color: white;
         
     }
-    button
-    {
-        height: 30px;
+    .checkbox{
+       display: flex;
+       margin-left: 10px;
+       padding: 10px;
     }
+    .checkbox >input{
+       height: 20px;
+       width: 20px;
+    }
+    .checkbox > label{
+       margin-top: 6px;
+       margin-left: 8px;
+    }
+    
 </style>
 <body>
     <div id="header">
@@ -94,15 +119,66 @@
     <div id="body_cont">
         <div id="left">
            <div class="fltered">
-              <h1>Filtered By:</h1>
-              <label >Sort by Price</label>
-              <select name="" id="price_filter">
-                 <option value="select">Select</option>
-                 <option value="HtoL">High To Low</option>
-                 <option value="LtoH">Low To High</option>
-               </select>
-               <button onclick="apply_changes()">Apply Changes</button>
-           </div>
+                <h1>Apply Filters</h1>
+                <hr>
+                <label >Sort by Brand</label>
+                <br>
+                <br>
+                  <div id="brand">
+                      <div class="checkbox">
+                       <input type="checkbox" id="Bohemiana" >
+                       <label  for="Bohemiana">Bohemiana</label>
+                      </div>
+              
+                   <div  class="checkbox">
+                     <input type="checkbox" id="Amberville">
+                     <label for="Amberville">Amberville</label>
+                      
+                   </div>
+                   <div   class="checkbox">
+                       <input type="checkbox" id="Mudramark">
+                        <label for="Mudramark">Mudramark</label>
+                   </div>
+                   <div   class="checkbox">
+                    <input type="checkbox"  id="Woodsworth">
+                    <label for="Woodsworth">Woodsworth</label>
+                   </div>
+                 </div>
+                <br>
+                <label >Sort By price</label>
+                <div id="selling_price">
+                   <div class="checkbox">
+                      <input type="checkbox" id="Less than 10k">
+                      <label for="Less than 10k">Under ₹ 10000</label>
+                   </div>
+                   <div class="checkbox">
+                      <input type="checkbox" id="10k to 20K">
+                      <label for="Less than 10k">10000 to ₹ 20000</label>
+                   </div>
+                   <div class="checkbox">
+                      <input type="checkbox" id="20K and above">
+                      <label for="Less than 10k">Over ₹ 20000</label>
+                   </div>
+                </div>
+                <br>
+                <label >Sort by discount</label>
+                <div id="discount_price">
+                   <div class="checkbox" >
+                      <input type="checkbox" id="ten">
+                      <label for="ten">10 % and above</label>
+                   </div>
+                   <div class="checkbox">
+                      <input type="checkbox" id="ten to twenty">
+                      <label for="ten to twenty">20 % and above</label>
+                   </div>
+                   <div class="checkbox" >
+                      <input type="checkbox" id="twenty and above">
+                      <label for="twenty and above">30% and above</label>
+                   </div>
+                </div>
+
+
+               </div>
         </div>
 
         <div id="right"></div>
@@ -283,23 +359,24 @@
 
               
                let p_price=document.createElement("span");
-               p_price.innerText=`Rs ${product.price}`;
-               p_price.setAttribute("style","margin-left:10px;text-decoration:line-through;")
+               p_price.innerText=`₹ ${product.price}`;
+               p_price.setAttribute("style","margin-left:10px;text-decoration:line-through;margin-top:0px")
 
                let discount=document.createElement("span")
                let discount_percentage=Math.floor((Math.random()*30+10))
                let discount_price=Math.floor((discount_percentage/100)*product.price)
                let net_price=Number(product.price)-discount_price;
                product["netPrice"]=net_price;
-               discount.innerHTML=`Rs ${net_price}`;
+              
+               discount.innerHTML=`₹ ${net_price}`;
                discount.setAttribute("style","margin-left:5px;")
 
                let saving=document.createElement("p")
-               saving.innerHTML=`Save Rs ${discount_price}(${discount_percentage}% Off),Limited Time Offer`
-               saving.setAttribute("style","color:#9E9E9E;margin:10px")
+               saving.innerHTML=`Save ₹ ${discount_price}(${discount_percentage}% Off),Limited Time Offer`
+               saving.setAttribute("style","color:#9E9E9E;margin:0px 10px")
 
                let remarks=document.createElement("p")
-               remarks.innerHTML=`Extra Cashback Worth Rs ${Math.floor(Math.random()*1000+3000)}`
+               remarks.innerHTML=`Extra Cashback Worth ₹ ${Math.floor(Math.random()*1000+3000)}`
                remarks.setAttribute("style","margin:10px;color:#304FFE")
 
                let ship_box=document.createElement('div')
@@ -310,7 +387,7 @@
                shiping_day.innerHTML="Ships in 2 days"
 
                ship_box.append(ship_img,shiping_day)
-               ship_box.setAttribute("style","height:40px;display:grid;grid-template-columns:12% 88%;")
+               ship_box.setAttribute("style","height:40px;display:grid;grid-template-columns:12% 88%;margin-top:-2px;")
 
                
 
@@ -337,7 +414,7 @@
 
                div_img.addEventListener("mouseover",function () {
                    p_image.setAttribute("style","transform:scale(1.12)")
-                div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:38px;background-color:#FAFAFA;")
+                div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:30px;background-color:#FAFAFA;")
                });
                 div_img.addEventListener("mouseleave",function () {
                 p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
@@ -348,18 +425,13 @@
                details_div.append(p_name,brand_box,price_box,saving,remarks,ship_box)
                details_div.setAttribute("style","position:relative;bottom:40px;margin-bottom:10px")
              
-           
+               
               
                div_el.append(div_img,details_div)
                
                div_right.append(div_el)
 
-             
-         
 
-              
-
-               
               cart_btn.onclick=function () {
                   addtoCart(product);
                 }
@@ -411,7 +483,26 @@
          localStorage.setItem("wishlist",JSON.stringify(wishlist_data))
          
         }
+        
+
+       var check_bohemiana=document.getElementById("Bohemiana")
+       check_bohemiana.addEventListener("onclick",function () {
+     
+         document.getElementById("right").innerHTML="";
+  
+         let product_items=localStorage.getItem("myProduct");
+         product_items=JSON.parse(product_items)
         console.log(product_items);
+          
+         let arr="";
+         console.log(product_items);
+         if(check_bohemiana.checked==true && product_items.brand=="Bohemiana"){
+
+            arr =product_items
+            
+          }
+         
+       })
         
         
 </script>
