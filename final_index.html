@@ -9,6 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         * {
@@ -77,7 +88,8 @@
         #navigation_child_1>div:nth-child(2)>input {
             width: 600px;
             padding: 10px;
-            background-color: rgba(228, 225, 225, .5);
+            /* background-color: rgba(228, 225, 225, .5); */
+            background-color: rgb(248, 248, 248);
             border-radius: 10px 0 0 10px;
             border: 2px solid rgba(121, 127, 133, 0.5);
             border-right: none;
@@ -133,7 +145,8 @@
             top: 0;
             background-color: white;
             border: 1px solid white;
-            
+            z-index: 10;
+
 
         }
 
@@ -174,7 +187,7 @@
             padding-left: 15px;
         }
 
-        
+
 
         .Furniture_color {
             background-color: rgb(245, 245, 245);
@@ -282,7 +295,7 @@
         #profile_drop {
             position: absolute;
             top: 45%;
-            left: 81%;
+            left: 85%;
             box-shadow: 5px 0 10px rgba(128, 128, 128, .4);
             background-color: white;
             max-width: 120px;
@@ -325,7 +338,7 @@
         #profile_drop2 {
             position: absolute;
             top: 45%;
-            left: 81.5%;
+            left: 85%;
             box-shadow: 2px 0 10px rgba(128, 128, 128, .4);
             background-color: white;
             max-width: 120px;
@@ -368,6 +381,196 @@
             display: flex;
             text-align: justify;
         }
+
+
+
+
+
+        /*------------------------------------css of nimbalkar--------------------------------------------*/
+
+        .basic1{
+                padding: 16px;
+            }
+            .main_div{
+                max-width: 96%;
+                box-sizing: border-box;
+                margin: auto;
+                font-family: 'Fira Sans', sans-serif;
+            }
+            .main_div img{
+                max-width: 100%;
+            }
+            .help{
+                float: right;
+                right: 0%;
+                top: 40%;
+                position: fixed;
+                margin: auto;
+                width: 75px;
+                height: 75px;
+                background-color: white;
+                box-sizing: border-box;
+                padding: 8px;
+                font-size: 70%;
+                text-align: center;
+                border-radius: 5%;
+                
+                box-shadow: 0px 0px 7px rgb(179, 178, 178);
+            }
+            .help_button{
+                width: 50%;
+                height: 50%;
+                margin: auto;
+                color: white;
+                background-color: black;
+                border-radius: 50%;
+                box-sizing: border-box;
+                font-size: 35px;
+                text-align: center;
+                line-height: 90%;
+                font-weight: 200;
+                margin-bottom: 5px;
+                
+            }
+            .banner{
+                display: flex;
+                box-sizing: border-box;
+                max-width: 100%;
+            }
+            .slider{
+                overflow:hidden ;
+                max-width: 65%;
+                box-sizing: border-box;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                
+            }
+            .move{
+                display: flex;
+                position: relative;
+                animation-name: example;
+                animation-duration: 10s;
+                animation-delay: 3s;
+                animation-iteration-count: infinite;
+                animation-direction:normal;
+                animation-timing-function:cubic-bezier(0.007, 1, 0, 1.001);
+                min-height: 100%;
+                width: 500%;
+                
+            }
+            .slider img{
+                width: 20%;
+                min-height: 100%;
+                
+            }
+            @keyframes example{
+                0%{
+                    left: 0%;
+                }
+                20%{
+                    left: -100%;
+                }
+                40%{
+                    left: -200%;
+                }
+                60%{
+                    left: -300%;
+                }
+                80%{
+                    left: -400%;
+                }
+                100%{
+                    left: -500%;
+                }
+            }
+            .side_banner{
+                max-width: 35%;
+                box-sizing: border-box;
+                padding: 16px;
+            }
+            .side_banner img{
+                max-width: 100%;
+
+            }.side_banner_top{
+                margin-bottom: 16px;
+            }
+            .covid{
+                padding: 16px;
+            }
+            .bankoffers{
+                letter-spacing: 1px;
+            }
+            .banks{
+             display: grid;
+             grid-template: "1 2 3 4 5 6";
+             grid-gap: 10px;
+            }
+            .personality{
+                background-color: #f3f5f7;
+                
+            }
+            .personality h3{
+                letter-spacing: 1px;
+                margin: 0;
+                
+            }
+            .personality h4{
+                margin-top: 10px;
+                font-weight: lighter;
+                color: #969696;
+            }
+            .perso_products{
+                display: grid;
+                grid-template: "1 2 3"
+                               "4 5 6"
+                               "7 8 9";
+                grid-gap: 16px;
+            }
+            .product{
+                background-color: white;
+                padding: 16px;
+                min-width: 33%;
+                
+                letter-spacing: .26px;
+                font-size: 13px;
+            }
+            .prod_title{
+                box-sizing: border-box;
+                max-width: 100%;
+            }
+            .prod_title img{
+                max-width: 50%;
+                max-height: 50px;
+            }
+            .prod_bold{
+                font-weight: 600;
+                color: black;
+            }
+            .prod_img img{
+                min-width: 100%;
+            }
+            .prod_footer{
+               color: #8ad4e6;
+               margin-top: 10px;
+            }.footer{
+                background-color: #f3f5f7;
+            }
+            .footer_head{
+                background-color: white;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 16px;
+                letter-spacing: .26px;
+            }
+            .footer_last{
+                display: flex;
+                color: #969696;
+                font-size: 13px;
+            }
+            .footer_contain{
+                padding: 16px 40px 20px 16px;
+                line-height: 20px;
+            }
     </style>
 </head>
 
@@ -441,7 +644,8 @@
             <div id="profile_drop2">
                 <div class="profile_drop2_div" style="margin-bottom: 10px;"><a href="" class="profile_drop2_a">
                         <h4>Hi Man</h4>
-                    </a></div><hr>
+                    </a></div>
+                <hr>
                 <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
                         <h5>My Account</h5>
                     </a></div>
@@ -463,10 +667,10 @@
             </div>
             <script>
                 var logout1 = document.getElementById("logout");
-                function removr_item(){
+                function removr_item() {
                     localStorage.removeItem("login");
                 }
-                logout1.addEventListener("click",removr_item);
+                logout1.addEventListener("click", removr_item);
             </script>
 
             <div id="navigation_child_2" class="basic">
@@ -560,7 +764,7 @@
                     </div>
                     <div class="Furniture_div">
                         <h3>Chairs</h3>
-                        <div class="Furniture_div_a"><a href="">Arm Chair</a></div>
+                        <div class="Furniture_div_a"><a href="arm_chair.html">Arm Chair</a></div>
                         <div class="item_a"><a href="">Rocking Chairs</a></div>
                         <div class="item_a"><a href="">Lounge Chairs</a></div>
                         <div class="item_a"><a href="">Cafe Chairs</a></div>
@@ -820,7 +1024,217 @@
         </script>
 
     </header>
-    
+
+                                    <!-- tejash code from here -->
+
+    <div class="main_div">
+        <div class="help prod_bold">
+            <div class="help_button">
+                +
+            </div>
+            Need Help Buying?
+        </div>
+        <div class="banner">
+            <div class="slider">
+                <div class="move">
+                                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2x_20821_n.jpg" alt="">
+                                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB01_Web_1982021_2x.jpg" alt="">
+                                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB02_Web_1982021_2x.jpg" alt="">
+                                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB03_Web_1982021_2x.jpg" alt="">
+                                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB04_Web_1982021_2x.jpg" alt="">
+                                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2x_20821_n.jpg" alt="">
+                </div>
+            </div>
+            <div class="side_banner">
+                <div class="side_banner_top"><img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Clouddio_RHS_2_20Aug21_2x.jpg" alt="Great mattress"></div>
+                    <div class="side_banner_bottom"><img src="https://ii2.pepperfry.com/media/wysiwyg/banners/WEB_RHS_Recliner_2x_2421_n.png" alt="Recliner offer"></div>
+            </div>
+        </div>
+        <div class="covid"><img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Safe_Web2_2x_11062021.jpg" alt="Ensuring Safe Delevry To You">
+        </div>
+        <div class="bankoffers basic1">
+            <h3>BANK OFFERS</h3>
+        </div>
+        <div class="banks basic1">
+            <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Web_Bank_0116421_2x_new.jpg" alt="No Cost EMI">
+            <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Web_Bank_0216421_2x_new.jpg" alt="Kotak Mahindra Bank Offers">
+            <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/Web_Bank_0416721_2x.jpg" alt="American Express Bank Offers">
+            <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Web_Bank_HDFC_02_5721_2x.jpg" alt="HDFC Bank EMI Offers">
+            <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Web_Bank_0522421_2x.jpg" alt="ICICI Bank offers">
+            <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/Web_Bank_YES_01_5721_2x.jpg" alt="HDFC Bank Credit Cand offers">
+        </div>
+        <div class="personality basic1">
+            <div class="personality_title">
+                <h3>SHOP BY PERSONALITY</h3>
+                <h4>What's Their Style?</h4>
+            </div>
+            <div class="perso_products">
+                <div class="product">
+                    <div class="prod_title">
+                        <img style="max-width: 70%;" src="https://ii1.pepperfry.com/media/wysiwyg/banners/hp-brand-logo-woodsworth_2x_15012021.png" alt="woodsworth"/>
+                        <div><span class="prod_bold">Traits :</span>
+                        "Contemporary, Clean, Functiona"
+                        </div>
+                    </div>
+                    <div class="prod_rupee">
+                        <span class="prod_bold">Price : </span>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                    </div>
+                    <div class="prod_img">
+                        <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Bs_web_10082021_1.jpg" alt="woodsworth"/>
+                           <div>Our Contemporary Wooden Furniture Brand that offers Wide Furniture Choices.</div>
+                    </div>
+                    <div class="prod_footer"><span class="prod_bold">Popular For :</span>
+                        Dining Sets, Beds, Study Tables & More
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="prod_title">
+                        <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/hp-brand-logo-casacraft_2x_15012021.png" alt="casacraft"/>
+                        <div><span class="prod_bold">Traits :</span>
+                        "Trendy, Comfortable, Vibrant"
+                        </div>
+                    </div>
+                    <div class="prod_rupee">
+                        <span class="prod_bold">Price : </span>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                    </div>
+                    <div class="prod_img">
+                        <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Bs_web_10082021_2.jpg" alt="casacraft"/>
+                           <div>Modern Living Room Furniture Brand which brings you Latest Trends from across the Globe.</div>
+                    </div>
+                    <div class="prod_footer"><span class="prod_bold">Popular For :</span>
+                        Sofas, Coffee tables, End Tables & More
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="prod_title">
+                        <img style="max-width: 80%;" src="https://ii2.pepperfry.com/media/wysiwyg/banners/hp-brand-logo-mudramark_2x_15012021.png" alt="mudramark"/>
+                        <div><span class="prod_bold">Traits :</span>
+                        "Ethnic, Indian Carvings, Impeccable Crafting"
+                        </div>
+                    </div>
+                    <div class="prod_rupee">
+                        <span class="prod_bold">Price : </span>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                    </div>
+                    <div class="prod_img">
+                        <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/Bs_web_10082021_3.jpg" alt="mudramark"/>
+                           <div>A wide range of Traditional Furniture inspired from our Indian Heritage.</div>
+                    </div>
+                    <div class="prod_footer"><span class="prod_bold">Popular For :</span>
+                        Coffee Tables, Cabinets, Dining sets & More
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="prod_title">
+                        <img style="max-width: 35%;" src="https://ii1.pepperfry.com/media/wysiwyg/banners/hp-brand-logo-mintwud_2x_15012021.png" alt="mintwud"/>
+                        <div><span class="prod_bold">Traits :</span>
+                        "Modern, Functional, Affordable"
+                        </div>
+                    </div>
+                    <div class="prod_rupee">
+                        <span class="prod_bold">Price : </span>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                    </div>
+                    <div class="prod_img">
+                        <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Bs_web_19082021_4.jpg" alt="mintwud"/>
+                           <div>Designed for Compact Homes. Its Minimalistic, Simple and Functional Furniture at Affordable Price.</div>
+                    </div>
+                    <div class="prod_footer"><span class="prod_bold">Popular For :</span>
+                        Wardrobes, Beds, Shoe Racks & More
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="prod_title">
+                        <img style="max-width: 45%;" src="https://ii3.pepperfry.com/media/wysiwyg/banners/hp-brand-logo-amberville_2x_15012021.png" alt="amberville"/>
+                        <div><span class="prod_bold">Traits :</span>
+                        "Gracious Living, Colonial Style, Curved Lines"
+                        </div>
+                    </div>
+                    <div class="prod_rupee">
+                        <span class="prod_bold">Price : </span>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                    </div>
+                    <div class="prod_img">
+                        <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Bs_web_10082021_5.jpg" alt="amberville"/>
+                           <div>A range of Hand-crafted Colonial Furniture inspired by Mid-Century Designs.</div>
+                    </div>
+                    <div class="prod_footer"><span class="prod_bold">Popular For :</span>
+                        Study Tables, Chest of Drawers, Chairs & More
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="prod_title">
+                        <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/hp-brand-logo-bohemiana_2x_15012021.png" alt="bohemiana"/>
+                        <div><span class="prod_bold">Traits :</span>
+                        "Hand-Crafted, Free-Spirited , Adventurous"
+                        </div>
+                    </div>
+                    <div class="prod_rupee">
+                        <span class="prod_bold">Price : </span>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img style="color: #f37132;" src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                        <img src="https://ii1.pepperfry.com/images/svg/hp-brand-price-rate-inactive.svg" alt=""/>
+                    </div>
+                    <div class="prod_img">
+                        <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/Bs_web_10082021_6.jpg" alt="bohemiana"/>
+                           <div>Eclectic Furniture inspired by the Spirit of Freedom and Adventure.</div>
+                    </div>
+                    <div class="prod_footer"><span class="prod_bold">Popular For :</span>
+                        End Tables, Seating stools, Bar stools & More
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_head">
+                <h3>WHAT YOU’VE BEEN EYEING</h3>
+            </div>
+            <div class="footer_last">
+                <div class="footer_contain">
+                    <h5 class="prod_bold">POPULAR CATEGORIES</h5>
+                    Queen Size Beds, King Size Beds, Coffee Tables, Dining Sets, Recliners, Sofa cum Beds, Rocking Chairs, Cabinets, Book Shelves, TV Unit, Wardrobes, Outddoor Furniture, Bar Cabinets, Wall Shelves, Photo Frames, Bed Sheets, Mattresses, Table Cloth, Living Room Furniture, Study Tables, Dining Room Furniture, Office Furniture, Bed Room Furniture, Dining Table, Beds, Sofas
+                </div>
+                <div class="footer_contain">
+                    <h5 class="prod_bold">POPULAR BRANDS</h5>
+                    Mintwud, Woodsworth, CasaCraft, Amberville, Mudramark, Bohemiana, Primorati, Mollycoddle, Mangiamo, Clouddio, Spacewood, Durian, Star India, Adiko Systems, Crystal Furnitech, Springtek, Story@Home, Parin, Furnitech, Trevi Furniture, Peachtree, Durfi, Muebles Casa, Duroflex
+                </div>
+                <div class="footer_contain">
+                    <h5 class="prod_bold">CITIES WE DELIVER TO</h5>
+                    Bengaluru, Mumbai, Navi Mumbai, Delhi, Hyderabad, Pune, Chennai, Gurgaon, Kolkata, Noida, Goa, Ghaziabad, Ahmedabad, Coimbatore, Faridabad, Jaipur, Lucknow, Kochi, Visakhapatnam, Chandigarh, Vadodara, Nagpur, Thiruvananthapuram, Indore, Mysore, Bhopal, Surat, Jalandhar, Patna, Ludhiana, Nashik, Madurai, Kanpur, Aurangabad, Imphal, Hubli, Guwahati and many more
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 </body>
