@@ -26,6 +26,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Fira Sans';
+            font-size: 13px;
         }
 
 
@@ -571,6 +572,188 @@
                 padding: 16px 40px 20px 16px;
                 line-height: 20px;
             }
+
+
+
+
+    /*---------- tejash cartpopup css from here -------------->*/
+
+
+    #popup{
+                background-color: rgba(0, 0, 0,0.6);
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: none;
+                position: fixed;
+                align-items: center;
+                overflow: hidden;
+                z-index: 11;
+            }
+            #blank{
+                width: 63%;                
+                height: 100%;
+            }
+            #cart_pop{
+                background-color: white;
+                width: 37%;
+                height: 100%;
+                font-family: 'Fira Sans', sans-serif;
+                margin: 0%;
+                opacity: none;
+                font-size: 13px;
+            }
+            #head_cart{
+                background-color: black;
+                color: white;
+                padding: 16px;
+                padding-bottom: 0px;
+            }
+            #pin{
+                padding: 9px;
+                border: 1px solid #eaeaea;
+                width: 80px;
+                text-align: left;
+                margin: 0 10px; 
+                width: 153px;
+                box-sizing: border-box;
+                font-size: 13px;
+                color: #969696;
+            }
+            #close_btn{
+                max-width: 4.5%;
+                max-height: 4.5%;
+                box-sizing: border-box;
+                padding: 2px;
+                float: right;
+            }
+            .btns{
+                clear: both;
+                display: flex;
+                box-sizing: border-box;
+                padding-bottom: 0px;
+                margin-top: 16px;
+            }
+            .btns_btn{
+                padding: 15px;
+                color: #fff;
+                cursor: default;
+                background-color: #000;
+                border-top-right-radius: .4rem;
+                border-top-left-radius: .4rem;
+                
+            }
+            .items_count{
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                border-radius: 50%;
+                color: #969696;
+                float: right;
+                text-align: center;
+                padding-top: 0.5px;
+                box-sizing: border-box;
+                margin-left: 4px;
+                
+            }
+            .body_cart{
+               
+                height: 81%;
+                align-items: center;
+                overflow: scroll;
+                padding: 16px;
+            }
+            .empty{
+                display: none;
+                align-items: center;
+                text-align: center;
+                font-size: 18.5px;
+                line-height: 24px;
+                margin-top: 19%;
+                margin: 19% auto;
+                width: 50%;
+            }
+            #recent_btn{
+                border: .5px solid #f16521 !important;
+                color: #f16521 !important;
+                width: fit-content;
+                margin: auto;
+                padding: 8px 50px;
+                font-size: 14px;
+                margin-top: 25px;
+            }
+            #wishlist_btn{
+                border: .5px solid #f16521 !important;
+                color: #f16521 !important;
+                width: fit-content;
+                margin: auto;
+                padding: 8px 50px;
+                font-size: 14px;
+                margin-top: 25px;
+            }
+            #cart_btn{
+                border: .5px solid #f16521 !important;
+                color: #f16521 !important;
+                width: fit-content;
+                margin: auto;
+                padding: 8px 50px;
+                font-size: 14px;
+                margin-top: 25px;
+            }
+            .cart_content{
+                overflow: scroll;
+                padding: 16px;
+                display:none;
+            }
+            .wish_content{
+                overflow: scroll;
+                padding: 16px;
+                display:none;
+            }
+            .prod_bold{
+                font-weight: 600;
+                color: black;
+            }
+            .gray_small{
+                font-weight: 400;
+                color: gray;
+                
+            }
+            .leftff{
+                margin-left: 40px;
+                display: flex;
+                
+            }
+            .opx{
+                margin-top: 0px;
+                margin-bottom: 0
+            }
+            .pop_imgs{
+                float: left;
+            }
+            .pop_imgs img{
+                width: 100px;
+                height: 100px;
+                padding-right: 16px;
+            }
+            .pop_product{
+                clear: both;
+                padding: 16px;
+                border-bottom: 0.5px solid lightgray;
+            }
+            .checkout_btn{
+                color: white;
+                background-color:#f16521 ;
+                padding: 20px 120px;
+                margin: 0px;
+                transform: translate(0px,700%);
+            }
+            .checkout_btn p{
+                margin: auto;
+            }
+
     </style>
 </head>
 
@@ -607,20 +790,20 @@
                             <p>Track</p>
                         </a>
                     </div>
-                    <div class="nav_child_1_pading">
-                        <a href="" class="deco">
+                    <div class="nav_child_1_pading" onclick="show1(),count(),openWishlist()">
+                        
                             <img src="https://ii1.pepperfry.com/images/svg/header-wishlist-icon-2021.svg" alt="">
                             <p>Wishlist</p>
-                        </a>
+                        
                     </div>
-                    <div class="nav_child_1_pading">
-                        <a href="" class="deco">
+                    <div class="nav_child_1_pading" onclick="show1(),count(),openCart()">
+                        
                             <img src="https://ii1.pepperfry.com/images/svg/header-cart-icon-2021.svg" alt="">
                             <p>Cart</p>
-                        </a>
+                        
                     </div>
                     <div class="nav_child_1_pading">
-                        <a href="" class="deco">
+                        <a href="" class="deco"></a>
                             <img src="	https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg" alt="">
                             <div id="profile_button">
                                 <p>Profile</p>
@@ -1236,6 +1419,329 @@
     </div>
 
 
+
+
+
+                        <!-- tejash cartpopup code from here -->
+
+
+
+
+
+
+
+
+
+
+                        <div id="main" class="main_div">
+            
+
+            
+                            <div id="popup">
+                                <div id="blank"></div>
+                                <div id="cart_pop">
+                                    <div id="head_cart">
+                                        Showing Availability At <input  id="pin" type="text"/> Check <div id="close_btn">
+                                            <img style="max-width: 100%; max-height: 100%;" src="https://themonkstudio.com/images/Icon-close-thin.png" alt="">
+                                            </div>
+                                            <div class="btns">
+                                                <div class="btns_btn" id="mycart">MY CART <div class="items_count" id="cart_count"></div></div>
+                                                <div class="btns_btn" id="mywishlist">MY WISHLIST <div class="items_count" id="wish_count"></div></div>
+                                                <div class="btns_btn" id="recent">RECENTLY VIEWED</div>
+                                            </div>
+                                    </div>
+                                 <div class="body_cart">
+                                     <div class="empty" id="emptyRecent_div">
+                                         <img src="https://www.pepperfry.com/images/svg/empty-recently-view.svg" alt="empty product">
+                                         <p>Nothing To Display Here!</p>
+                                         <p  id="recent_btn">START SHOPPING</p>
+                                     </div>
+                                     <div class="empty" id="emotyWishlist_div">
+                                         <img src="https://www.pepperfry.com/images/svg/empty-wishlist.svg" alt="empty wishlist">
+                                         <p>You Haven't Added Any Item
+                                            To Your Wishlist</p>
+                                            <p id="wishlist_btn">START WISHING 🙂</p>
+                                     </div>
+                                     <div class="empty" id="emptCart_div">
+                                         <img src="https://www.pepperfry.com/images/svg/empty-cart.svg" alt="empty cart">
+                                         <p>Your Shopping Cart Is Empty</p>
+                                         <p id="cart_btn">CONTINUE SHOPPING</p>
+                                     </div>
+                                     <div class=popup_content>
+                                        <div class="pop_content" id="cart_content">
+                                            <a href="">
+                                                <div class="checkout_btn">PROCEED TO PAY SECURELY</div>
+                                            </a>
+                                        </div>
+                                        <div class="pop_content" id="wish_content"></div>
+                                        
+                
+                                     </div>
+                                 </div>
+                                </div>
+                            </div>
+                
+                
+                        </div>
+
+
+
+                        <script>
+   
+
+                            function show1(){
+                                document.getElementById("popup").style.display = "flex";
+                                
+                            }
+                        
+                            document.getElementById("blank").addEventListener("click", hide);
+                            document.getElementById("close_btn").addEventListener("click", hide);
+                        
+                            function hide() {
+                                document.getElementById("popup").style.display = "none";
+                                
+                            }
+                        
+                            document.getElementById("recent_btn").addEventListener("click", hide);
+                            document.getElementById("cart_btn").addEventListener("click", hide);
+                            document.getElementById("wishlist_btn").addEventListener("click", hide);
+                            document.getElementById("mywishlist").addEventListener("click", openWishlist);
+                            document.getElementById("recent").addEventListener("click", openRecent);
+                            document.getElementById("mycart").addEventListener("click", openCart);
+                        
+                            function openRecent(){
+                                document.getElementById("recent").style.background = "#fff";
+                                document.getElementById("recent").style.color = "#000";
+                                document.getElementById("emptyRecent_div").style.display = "block";
+                        
+                                document.getElementById("mywishlist").style.background = "#000";
+                                document.getElementById("mywishlist").style.color = "#fff";
+                                document.getElementById("emotyWishlist_div").style.display = "none";
+                                document.getElementById("cart_content").style.display = "none";
+                                document.getElementById("wish_content").style.display = "none";
+                        
+                                document.getElementById("mycart").style.background = "#000";
+                                document.getElementById("mycart").style.color = "#fff";
+                                document.getElementById("emptCart_div").style.display = "none";
+                                
+                                document.getElementById("wish_count").style.background = "#fff";
+                                document.getElementById("wish_count").style.color = "#969696";
+                        
+                                document.getElementById("cart_count").style.background = "#fff";
+                                document.getElementById("cart_count").style.color = "#969696";
+                        
+                            }
+                            function openWishlist(){
+                                
+                                let wishlist_data = JSON.parse(localStorage.getItem("wishlist"))
+                                if(wishlist_data.length>0){
+                                   
+                                                
+                                    let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
+                                    let wish_content = document.getElementById("wish_content");
+                                  
+                                    wishlist_data.forEach(function(product){
+                                      
+                        
+                                        let pop_pro_div=document.createElement("div");
+                                        pop_pro_div.setAttribute("class","pop_product");
+                        
+                                        let img_div = document.createElement("div");
+                                        img_div.setAttribute("class","pop_imgs");
+                                        let popImage = document.createElement("img");
+                                        popImage.src = product.url;
+                                        img_div.append(popImage);
+                        
+                                        let p_name = document.createElement("p");
+                                        p_name.innerText=product.name+" "+product.brand+"...";
+                                        p_name.setAttribute("class","prod_bold")
+                        
+                                        let retail_price = document.createElement("div");
+                                        let retail_price1 = document.createElement("div");
+                                        let retail_price2 = document.createElement("div");
+                                        retail_price1.innerHTML ="Retail Price ";
+                                        retail_price2.innerHTML ="₹ "+product.price;
+                                        retail_price.append(retail_price1,retail_price2);
+                                        retail_price2.setAttribute("style","padding-left:40px;text-decoration:line-through;");
+                                        retail_price.setAttribute("style","display:flex");
+                                        retail_price.setAttribute("class","gray_small opx");
+                        
+                                        let p_price_d = document.createElement("div");
+                                        let p_price_d1 = document.createElement("div");
+                                        let p_price_d2 = document.createElement("div");
+                                        p_price_d1.innerHTML = "Offer Price";
+                                        p_price_d2.innerHTML = "₹ "+ product.netPrice;
+                                        p_price_d.append(p_price_d1,p_price_d2);
+                                        p_price_d2.setAttribute("style","padding-left:40px;font-weight:600;color:black;");
+                                        p_price_d.setAttribute("style","display:flex");
+                                        p_price_d.setAttribute("class","gray_small opx");
+                        
+                                        let moveMain = document.createElement("div");
+                                        let move_to1 = document.createElement("p");
+                                        let move_to = document.createElement("p");
+                                        move_to1.innerText = "Add to cart";
+                                        move_to.innerText = "Remove   ";
+                                        moveMain.append(move_to1,move_to);
+                                        move_to1.setAttribute("class","gray_small leftff");
+                                        move_to1.setAttribute("style","margin-left:80px;text-decoration: underline;margin-top:16px;");
+                                        move_to.setAttribute("style","text-decoration: underline;margin-top:16px;")
+                                        move_to.setAttribute("class","gray_small leftff");
+                                        moveMain.setAttribute("class","leftff");
+                        
+                                        pop_pro_div.append(img_div,p_name,retail_price,p_price_d,moveMain);
+                                        wish_content.append(pop_pro_div);
+                                    });
+                        
+                                    document.getElementById("wish_content").style.display = "block";
+                        
+                                }else{
+                                    document.getElementById("emotyWishlist_div").style.display = "block";
+                                    document.getElementById("wish_count").style.display = "none";
+                                }
+                                document.getElementById("mywishlist").style.background = "#fff";
+                                document.getElementById("mywishlist").style.color = "#000";
+                                
+                        
+                                document.getElementById("recent").style.background = "#000";
+                                document.getElementById("recent").style.color = "#fff";
+                                document.getElementById("emptyRecent_div").style.display = "none";
+                        
+                                document.getElementById("mycart").style.background = "#000";
+                                document.getElementById("mycart").style.color = "#fff";
+                                document.getElementById("emptCart_div").style.display = "none";
+                        
+                                document.getElementById("wish_count").style.background = "#f16521";
+                                document.getElementById("wish_count").style.color = "#fff";
+                        
+                                document.getElementById("cart_count").style.background = "#fff";
+                                document.getElementById("cart_count").style.color = "#969696";
+                        
+                                document.getElementById("cart_content").style.display = "none";
+                            }
+                        
+                            function openCart(){
+                                let cart_data = JSON.parse(localStorage.getItem("cart"));
+                                if(cart_data.length>0){
+                        
+                                    let cart_data = JSON.parse(localStorage.getItem("cart"));
+                                    var cart_content = document.getElementById("cart_content");
+                        
+                                    cart_data.forEach(function(product){
+                        
+                        
+                                        let pop_pro_div=document.createElement("div");
+                                        pop_pro_div.setAttribute("class","pop_product");
+                        
+                                        let img_div = document.createElement("div");
+                                        img_div.setAttribute("class","pop_imgs");
+                                        let popImage = document.createElement("img");
+                                        popImage.src = product.url;
+                                        img_div.append(popImage);
+                        
+                                        let p_name = document.createElement("p");
+                                        p_name.innerText=product.name+" "+product.brand+"...";
+                                        p_name.setAttribute("class","prod_bold")
+                        
+                                        let retail_price = document.createElement("div");
+                                        let retail_price1 = document.createElement("div");
+                                        let retail_price2 = document.createElement("div");
+                                        retail_price1.innerHTML ="Retail Price ";
+                                        retail_price2.innerHTML ="₹ "+product.price;
+                                        retail_price.append(retail_price1,retail_price2);
+                                        retail_price2.setAttribute("style","padding-left:40px;text-decoration:line-through;");
+                                        retail_price.setAttribute("style","display:flex");
+                                        retail_price.setAttribute("class","gray_small opx");
+                        
+                                        let p_price_d = document.createElement("div");
+                                        let p_price_d1 = document.createElement("div");
+                                        let p_price_d2 = document.createElement("div");
+                                        p_price_d1.innerHTML = "Offer Price";
+                                        p_price_d2.innerHTML = "₹ "+ product.netPrice;
+                                        p_price_d.append(p_price_d1,p_price_d2);
+                                        p_price_d2.setAttribute("style","padding-left:40px;font-weight:600;color:black;");
+                                        p_price_d.setAttribute("style","display:flex");
+                                        p_price_d.setAttribute("class","gray_small opx");
+                        
+                                        let moveMain = document.createElement("div");
+                                        let move_to1 = document.createElement("p");
+                                        let move_to = document.createElement("p");
+                                        move_to1.innerText = "Move To Wishlist   ";
+                                        move_to.innerText = "Remove   ";
+                                        moveMain.append(move_to1,move_to);
+                                        move_to1.setAttribute("class","gray_small leftff");
+                                        move_to1.setAttribute("style","margin-left:80px;text-decoration: underline;margin-top:16px;");
+                                        move_to.setAttribute("style","text-decoration: underline;margin-top:16px;")
+                                        move_to.setAttribute("class","gray_small leftff");
+                                        moveMain.setAttribute("class","leftff");
+                        
+                                        pop_pro_div.append(img_div,p_name,retail_price,p_price_d,moveMain);
+                                        cart_content.append(pop_pro_div);
+                        
+                                    });
+                        
+                        
+                        
+                                    document.getElementById("cart_content").style.display = "block";
+                        
+                        
+                        
+                                }else{
+                                    document.getElementById("emptCart_div").style.display = "block";
+                                    document.getElementById("cart_count").style.display = "none";
+                                    
+                                }
+                                document.getElementById("mycart").style.background = "#fff";
+                                document.getElementById("mycart").style.color = "#000";
+                                
+                        
+                                document.getElementById("recent").style.background = "#000";
+                                document.getElementById("recent").style.color = "#fff";
+                                document.getElementById("emptyRecent_div").style.display = "none";
+                        
+                                document.getElementById("mywishlist").style.background = "#000";
+                                document.getElementById("mywishlist").style.color = "#fff";
+                                document.getElementById("emotyWishlist_div").style.display = "none";
+                                document.getElementById("wish_content").style.display = "none";
+                        
+                                document.getElementById("wish_count").style.background = "#fff";
+                                document.getElementById("wish_count").style.color = "#969696";
+                        
+                                document.getElementById("cart_count").style.background = "#f16521";
+                                document.getElementById("cart_count").style.color = "#fff";
+                                
+                                
+                            }
+                            
+                            function count(){
+                            let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
+                            let cart_data = JSON.parse(localStorage.getItem("cart"));
+                               if(wishlist_data.length==0){
+                                   document.getElementById("wish_count").style.display = "none";
+                               }
+                               if(cart_data.length==0){
+                                document.getElementById("cart_count").style.display = "none";
+                               }
+                               
+                           }
+                        
+                        
+                        
+                           {
+                            let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
+                            let cart_data = JSON.parse(localStorage.getItem("cart"));
+                            let cart_count = document.getElementById("cart_count");
+                                let length = cart_data.length;
+                                cart_count.append(length);
+                            let wish = document.getElementById("wish_count");
+                            let length1 = wishlist_data.length;
+                            wish.append(length1);
+                            
+                           }
+                            
+                           
+                           
+                            
+                        </script>
 
 </body>
 
