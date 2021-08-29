@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_font/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Fira Sans';
+            font-size: 13px;
+        }
+
+
+        #container_child_1 {
+            padding: 15px 0;
+        }
+
+        .basic {
+            max-width: 1156px;
+            margin: auto;
+            box-sizing: border-box;
+            font-family: 'Fira Sans';
+        }
+
+        .float_left {
+            float: left;
+        }
+
+        .float_right {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .color_w {
+            color: white;
+        }
+
+
+        /*css for navigation bar*/
+
+        /*navigation_child_1 start*/
+
+
+        #navigation_child_1 {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+
+        #navigation_child_1>div:nth-child(1) {
+            max-width: 15.5709%;
+            margin-right: 2%;
+        }
+
+        #navigation_child_1>div>img {
+            width: 100%;
+        }
+
+        #navigation_child_1>div:nth-child(2) {
+            display: flex;
+            max-width: 82%;
+
+        }
+
+        #navigation_child_1>div:nth-child(2)>input {
+            width: 600px;
+            padding: 10px;
+            background-color: rgb(248, 248, 248);
+            border-radius: 10px 0 0 10px;
+            border: 2px solid rgba(121, 127, 133, 0.5);
+            border-right: none;
+        }
+
+        #navigation_child_1>div:nth-child(2)>a {
+            font-size: 24px;
+            padding: 10px;
+            color: black;
+            background-color: rgba(228, 225, 225, .5);
+            border: 2px solid rgba(121, 127, 133, 0.5);
+            border-left: none;
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        .nav_child_1_pading {
+            padding: 5px;
+            text-align: center;
+            margin: 0px 10px;
+            color: black;
+
+        }
+
+        .deco {
+            text-decoration: none;
+            color: black;
+        }
+
+        /*navigation_child_1 end*/
+        #navigation_child_2 {
+            display: flex;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .flex_groth {
+            flex-grow: 1;
+            text-decoration: none;
+            list-style: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        /* #navigation {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            border: 1px solid white;
+        } */
+        #container {
+
+            position: relative;
+            
+            background-color: white;
+            border: 1px solid white;
+            
+
+        }
+
+        .back_color {
+            background-color: red;
+            height: 3px;
+            text-align: center;
+        }
+
+        .display_non {
+            display: none;
+        }
+
+        #navigation_child_2 li:hover .display_non {
+            display: block;
+        }
+
+        #navigation_child_2 li:hover {
+            font-weight: 900;
+        }
+
+
+        #dropdown {
+
+            background-color: white;
+            padding: 30px;
+            padding-top: 0;
+        }
+
+        #Furniture {
+            display: flex;
+            text-align: justify;
+        }
+
+
+        .Furniture_div {
+            flex-grow: 1;
+            padding-left: 15px;
+        }
+
+        
+
+        .Furniture_color {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .Furniture_div>div>a {
+            text-decoration: none;
+            color: black;
+            margin-top: 10px;
+
+        }
+
+        .Furniture_div_a {
+            margin-top: 15px;
+        }
+
+        .item_a {
+            margin-top: 10px;
+        }
+
+        .Furniture_div>div>a:hover {
+            color: rgb(239, 102, 48);
+            font-weight: 900;
+        }
+
+        .drop_fur {
+            background-color: red;
+            height: 10px;
+            text-align: center;
+        }
+
+        /* login page css*/
+        #login {
+            width: 700px;
+            position: absolute;
+            top: 60%;
+            left: 30%;
+            background-color: white;
+            max-height: 530px;
+            display: flex;
+            box-shadow: 5px 0 10px rgba(128, 128, 128, .4);
+        }
+
+        #login>div:nth-child(1) {
+            width: 300px;
+        }
+
+        #login>div:nth-child(1)>img {
+            width: 100%;
+        }
+
+        #login>div:nth-child(2) {
+            padding: 5px;
+            padding-left: 40px;
+
+        }
+
+        .log_input {
+
+            width: 80%;
+            font-size: 15px;
+            padding: 10px 5px;
+        }
+
+        .log_lable {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .log_margin {
+            margin-top: 10px;
+        }
+
+        .log_cancel {
+            margin-left: 300px;
+        }
+
+        .log_logo {
+            width: 25px;
+            margin: 10px;
+        }
+
+        .log_register {
+
+            background-color: rgb(239, 102, 48);
+            border: none;
+            width: 85%;
+            padding: 10px 0px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .log_exist {
+            width: 85%;
+            padding: 10px 0px;
+            color: rgb(239, 102, 48);
+            background-color: white;
+            margin-top: 15px;
+        }
+
+
+        /* profile css*/
+        #profile_drop {
+            position: absolute;
+            top: 45%;
+            left: 85%;
+            box-shadow: 5px 0 10px rgba(128, 128, 128, .4);
+            background-color: white;
+            max-width: 120px;
+            border: 4px solid rgba(187, 185, 185, .3);
+            border-top: none;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #profile_drop>p {
+            font-size: 12px;
+            margin-top: 10px;
+            text-align: left;
+            max-width: 90px;
+        }
+
+        #profile_drop>button {
+            font-size: 12px;
+            padding: 10px;
+            background-color: rgb(239, 102, 48);
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        #profile_drop::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            right: 60px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
+            border: 2px solid rgba(179, 177, 177, .2);
+            border-bottom: none;
+            border-right: none;
+        }
+
+        #profile_drop2 {
+            position: absolute;
+            top: 45%;
+            left: 85%;
+            box-shadow: 2px 0 10px rgba(128, 128, 128, .4);
+            background-color: white;
+            max-width: 120px;
+            border: 2px solid rgba(187, 185, 185, .3);
+            border-top: none;
+            text-align: left;
+            padding: 15px;
+            font-size: 18px;
+            padding-right: 30px;
+            border-radius: 8px;
+
+        }
+
+        .profile_drop2_a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #profile_drop2::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            right: 47px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
+            border: 2px solid rgba(179, 177, 177, .2);
+            border-bottom: none;
+            border-right: none;
+        }
+
+        .profile_drop2_div {
+            margin-top: 13px;
+        }
+
+        /* livig item style */
+        #Living {
+            display: flex;
+            text-align: justify;
+        }
+        /*----------------------------------prasant code--------------------------------------- */
+        #header{
+        width: 100%;
+        text-align: center;
+        word-spacing: 8px;
+        height:360px;
+     
+        margin-bottom: 80px;
+        background-color: white;
+    }
+    #container1{
+       margin-left: 35%;
+       margin-right: 35%;   
+       background-color: #EEEEEE;
+       display: grid;
+       grid-template-columns: 50% 50%;
+       padding: 15px;
+       padding-top: 0;
+       margin-top: 30px;
+    }
+    .box{
+        margin: 1px;
+       
+    }
+    .box img{
+     width:98%;
+    margin-top: 2px;
+  
+    }
+    .box p{
+        height: 5px;
+        margin-top: 20px;
+       
+    }  
+    #body_cont{
+        text-align: center;
+        width: 100%;
+        display: grid;
+        gap: 2%;
+        grid-template-columns:28% 70% ;
+      
+       
+    }
+    #left{
+        background-color: white;
+          margin-left:80px;
+          margin-top: 3px;
+    }
+    #right{
+        font-weight: bolder;
+        text-align: left;
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+        
+      
+      
+    }
+    #right img{
+        width:100%;
+    }
+    #right div{
+      padding: 5px;
+        background-color: white;
+        
+    }
+    .checkbox{
+       display: flex;
+       margin-left: 10px;
+       padding: 10px;
+    }
+    .checkbox >input{
+       height: 20px;
+       width: 20px;
+    }
+    .checkbox > label{
+       margin-top: 6px;
+       margin-left: 8px;
+    }
+
+
+
+
+    /*---------- tejash cartpopup css from here -------------->*/
+
+
+    #popup{
+                background-color: rgba(0, 0, 0,0.6);
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: none;
+                position: fixed;
+                align-items: center;
+                overflow: hidden;
+                z-index: 11;
+            }
+            #blank{
+                width: 63%;                
+                height: 100%;
+            }
+            #cart_pop{
+                background-color: white;
+                width: 37%;
+                height: 100%;
+                font-family: 'Fira Sans', sans-serif;
+                margin: 0%;
+                opacity: none;
+                font-size: 13px;
+            }
+            #head_cart{
+                background-color: black;
+                color: white;
+                padding: 16px;
+                padding-bottom: 0px;
+            }
+            #pin{
+                padding: 9px;
+                border: 1px solid #eaeaea;
+                width: 80px;
+                text-align: left;
+                margin: 0 10px; 
+                width: 153px;
+                box-sizing: border-box;
+                font-size: 13px;
+                color: #969696;
+            }
+            #close_btn{
+                max-width: 4.5%;
+                max-height: 4.5%;
+                box-sizing: border-box;
+                padding: 2px;
+                float: right;
+            }
+            .btns{
+                clear: both;
+                display: flex;
+                box-sizing: border-box;
+                padding-bottom: 0px;
+                margin-top: 16px;
+            }
+            .btns_btn{
+                padding: 15px;
+                color: #fff;
+                cursor: default;
+                background-color: #000;
+                border-top-right-radius: .4rem;
+                border-top-left-radius: .4rem;
+                
+            }
+            .items_count{
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                border-radius: 50%;
+                color: #969696;
+                float: right;
+                text-align: center;
+                padding-top: 0.5px;
+                box-sizing: border-box;
+                margin-left: 4px;
+                
+            }
+            .body_cart{
+               
+                height: 81%;
+                align-items: center;
+                overflow: scroll;
+                padding: 16px;
+            }
+            .empty{
+                display: none;
+                align-items: center;
+                text-align: center;
+                font-size: 18.5px;
+                line-height: 24px;
+                margin-top: 19%;
+                margin: 19% auto;
+                width: 50%;
+            }
+            #recent_btn{
+                border: .5px solid #f16521 !important;
+                color: #f16521 !important;
+                width: fit-content;
+                margin: auto;
+                padding: 8px 50px;
+                font-size: 14px;
+                margin-top: 25px;
+            }
+            #wishlist_btn{
+                border: .5px solid #f16521 !important;
+                color: #f16521 !important;
+                width: fit-content;
+                margin: auto;
+                padding: 8px 50px;
+                font-size: 14px;
+                margin-top: 25px;
+            }
+            #cart_btn{
+                border: .5px solid #f16521 !important;
+                color: #f16521 !important;
+                width: fit-content;
+                margin: auto;
+                padding: 8px 50px;
+                font-size: 14px;
+                margin-top: 25px;
+            }
+            .cart_content{
+                overflow: scroll;
+                padding: 16px;
+                display:none;
+            }
+            .wish_content{
+                overflow: scroll;
+                padding: 16px;
+                display:none;
+            }
+            .prod_bold{
+                font-weight: 600;
+                color: black;
+            }
+            .gray_small{
+                font-weight: 400;
+                color: gray;
+                
+            }
+            .leftff{
+                margin-left: 40px;
+                display: flex;
+                
+            }
+            .opx{
+                margin-top: 0px;
+                margin-bottom: 0
+            }
+            .pop_imgs{
+                float: left;
+            }
+            .pop_imgs img{
+                width: 100px;
+                height: 100px;
+                padding-right: 16px;
+            }
+            .pop_product{
+                clear: both;
+                padding: 16px;
+                border-bottom: 0.5px solid lightgray;
+            }
+            .checkout_btn{
+                color: white;
+                background-color:#f16521 ;
+                padding: 20px 120px;
+                margin: 0px;
+                transform: translate(0px,700%);
+            }
+            .checkout_btn p{
+                margin: auto;
+            }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div style="background-color: black;">
+        <div id="container_child_1" class="basic">
+            <p class="float_left color_w"><span style="color: #ffaf00;">Extra 40% Cashback on Everything Use Code
+                </span> RAKHI</p>
+
+            <p class="float_right color_w"><span style="color: #ffaf00;">The Rakhi Sale | Up to 40% Off on
+                    Everything
+                </span><a href="https://www.pepperfry.com/promotions.html" style="text-decoration: underline;">
+                    T&amp;C apply
+                </a></p>
+            <p class="clear"></p>
+        </div>
+    </div>
+    <header id="container">
+
+
+
+        <div id="navigation">
+            <div id="navigation_child_1" class="basic">
+                <div>
+                    <img src="data:image/png;base64,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"
+                        alt="">
+                </div>
+                <div>
+                    <input type="text" placeholder="Search" />
+                    <a href=""><i class="fas fa-search"></i></a>
+                    <div style="margin-left: 10px;" class="nav_child_1_pading">
+                        <a href="#" class="deco">
+                            <img src="https://ii1.pepperfry.com/images/svg/header-track-icon-2021.svg" alt="">
+                            <p>Track</p>
+                        </a>
+                    </div>
+                    <div class="nav_child_1_pading" onclick="show1(),count(),openWishlist()">
+                        
+                            <img src="https://ii1.pepperfry.com/images/svg/header-wishlist-icon-2021.svg" alt="">
+                            <p>Wishlist</p>
+                        
+                    </div>
+                    <div class="nav_child_1_pading" onclick="show1(),count(),openCart()">
+                       
+                            <img src="https://ii1.pepperfry.com/images/svg/header-cart-icon-2021.svg" alt="">
+                            <p>Cart</p>
+                    </div>
+                    <div class="nav_child_1_pading">
+                        <a href="" class="deco">
+                            <img src="	https://ii1.pepperfry.com/images/svg/header-profile-icon-2021.svg" alt="">
+                            <div id="profile_button">
+                                <p>Profile</p>
+
+                            </div>
+
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+            <hr />
+            <div id="profile_drop">
+                <button id="log_regist">
+                    <h4>LOGIN / REGISTER</h4>
+                </button>
+                <p>To access your account & manage orders</p>
+            </div>
+
+            <div id="profile_drop2">
+                <div class="profile_drop2_div" style="margin-bottom: 10px;"><a href="" class="profile_drop2_a">
+                        <h4>Hi Man</h4>
+                    </a></div><hr>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h5>My Account</h5>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h5>My Order</h5>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h5>My Wishlist</h5>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h5>My Wollet</h5>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h5>My Profile</h5>
+                    </a></div>
+                <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
+                        <h5 id="logout">Logout</h5>
+                    </a></div>
+            </div>
+            <script>
+                var logout1 = document.getElementById("logout");
+                function removr_item(){
+                    localStorage.removeItem("login");
+                }
+                logout1.addEventListener("click",removr_item);
+            </script>
+
+            <div id="navigation_child_2" class="basic">
+
+                <a href="" class="flex_groth">
+                    <li id="li_furniture"> Furniture
+                        <div class="back_color display_non"></div>
+
+                    </li>
+
+
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Living
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Bedroom
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Kids Room
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Mattresses
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Furnishings
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Decor
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Lighting
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Appliances
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+                <a href="" class="flex_groth">
+                    <li> Modular Furniture
+                        <div class="back_color display_non"></div>
+                    </li>
+                </a>
+
+
+            </div>
+            <hr />
+            <!-- this is one -->
+            <div id="dropdown">
+                <div id="Furniture" class="basic">
+                    <div class="Furniture_div">
+                        <h3>Sofas</h3>
+                        <div class="Furniture_div_a"><a href="">Sofas</a></div>
+                        <div class="item_a"><a href="">1 Seater Sofas</a></div>
+                        <div class="item_a"><a href="">2 Seater Sofas</a></div>
+                        <div class="item_a"><a href="">3 Seater Sofas</a></div>
+                        <div class="item_a"><a href="">Sofa Sets</a></div>
+                        <div class="item_a"><a href="">Sectional Sofas</a></div>
+                        <div class="item_a"><a href="">Sofa Cum Beds</a></div>
+                        <div class="item_a"><a href="">Recliners</a></div>
+                        <div class="item_a"><a href="">Futons</a></div>
+                        <div class="item_a"><a href="">Sofa Spa</a></div>
+                    </div>
+                    <div class="Furniture_div Furniture_color">
+                        <h3>Seating</h3>
+                        <div class="Furniture_div_a"><a href="">Settees</a></div>
+                        <div class="item_a"><a href="">Benches</a></div>
+                        <div class="item_a"><a href="">Chaise Loungers</a></div>
+                        <div class="item_a"><a href="">Recamiers</a></div>
+                        <div class="item_a"><a href="">Ottomans</a></div>
+                        <div class="item_a"><a href="">Pouffes</a></div>
+                        <div class="item_a"><a href="">Foot Stools</a></div>
+                        <div class="item_a"><a href="">Seating Stools</a></div>
+                        <div class="item_a"><a href="">Bean Bags</a></div>
+                        <div class="item_a"><a href="">Swings</a></div>
+                        <div class="item_a"><a href="">Hammocks</a></div>
+                    </div>
+                    <div class="Furniture_div">
+                        <h3>Chairs</h3>
+                        <div class="Furniture_div_a"><a href="">Arm Chair</a></div>
+                        <div class="item_a"><a href="">Rocking Chairs</a></div>
+                        <div class="item_a"><a href="">Lounge Chairs</a></div>
+                        <div class="item_a"><a href="">Cafe Chairs</a></div>
+                        <div class="item_a"><a href="">Iconic Chairs</a></div>
+                        <div class="item_a"><a href="">Slipper Chairs</a></div>
+                        <div class="item_a"><a href="">Barrel Chairs</a></div>
+                        <div class="item_a"><a href="">Chuntilever Chairs</a></div>
+                        <div class="item_a"><a href="">Folding Chairs</a></div>
+                        <div class="item_a"><a href="">Plastic Chairs</a></div>
+                        <div class="item_a"><a href="">Wing Chairs</a></div>
+                        <div class="item_a"><a href="">Office Chairs</a></div>
+                        <div class="item_a"><a href="">Patio Chairs</a></div>
+                    </div>
+                    <div class="Furniture_div Furniture_color">
+                        <h3>Tables</h3>
+                        <div class="Furniture_div_a"><a href="">Coffee Tables</a></div>
+                        <div class="item_a"><a href="">Coffee Tables Sets</a></div>
+                        <div class="item_a"><a href="">End Tables</a></div>
+                        <div class="item_a"><a href="">Nest of Tables</a></div>
+                        <div class="item_a"><a href="">Console Tables</a></div>
+                        <div class="item_a"><a href="">Portable Tables</a></div>
+                        <div class="item_a"><a href="">Study Tables</a></div>
+                        <div class="item_a"><a href="">Dressing Tables</a></div>
+                        <div class="item_a"><a href="">Bedside Tables</a></div>
+                        <div class="item_a"><a href="">Office Tables</a></div>
+                        <div class="item_a"><a href="">Patio Tables & Sets</a></div>
+
+                    </div>
+                    <div class="Furniture_div">
+                        <h3>Cabinetry</h3>
+                        <div class="Furniture_div_a"><a href="">Shoe Racks</a></div>
+                        <div class="item_a"><a href="">Entertainment Units</a></div>
+                        <div class="item_a"><a href="">Cabinets</a></div>
+                        <div class="item_a"><a href="">Sideboards</a></div>
+                        <div class="item_a"><a href="">hutch Cabinates</a></div>
+                        <div class="item_a"><a href="">Chest of Drawers</a></div>
+                        <div class="item_a"><a href="">Book Cases</a></div>
+                        <div class="item_a"><a href="">Trunks</a></div>
+                        <div class="item_a"><a href="">Wardrobes</a></div>
+                        <div class="item_a"><a href="">Modular Wardrobes</a></div>
+                        <div class="item_a"><a href="">Plastic Cabinets</a></div>
+                        <div class="item_a"><a href="">Office Cabinets</a></div>
+                    </div>
+                    <div class="Furniture_div Furniture_color">
+                        <h3>Dining & Bar</h3>
+                        <div class="Furniture_div_a"><a href="">Dining Sets</a></div>
+                        <div class="item_a"><a href="">Dining Chairs</a></div>
+                        <div class="item_a"><a href="">Dining Chairs</a></div>
+                        <div class="item_a"><a href="">Bar Cabinets</a></div>
+                        <div class="item_a"><a href="">Bar Units</a></div>
+                        <div class="item_a"><a href="">Bar Trolleys</a></div>
+                        <div class="item_a"><a href="">Wine Rocks</a></div>
+                        <div class="item_a"><a href="">Bar Stools</a></div>
+                        <div class="item_a"><a href="">Bar Table Sets</a></div>
+                        <div class="item_a"><a href="">Modular Kitchens</a></div>
+                    </div>
+                    <div class="Furniture_div">
+                        <h3>Beds</h3>
+                        <div class="Furniture_div_a"><a href="">Beds</a></div>
+                        <div class="item_a"><a href="">Single Beds</a></div>
+                        <div class="item_a"><a href="">Queen Size Beds</a></div>
+                        <div class="item_a"><a href="">King Size Beds</a></div>
+                        <div class="item_a"><a href="">Uphoslstered Beds</a></div>
+                        <div class="item_a"><a href="">Poster Beds</a></div>
+                        <div class="item_a"><a href="">Bank Beds</a></div>
+                        <div class="item_a"><a href="">Trundle Beds</a></div>
+                        <div class="item_a"><a href="">Folding Beds</a></div>
+                        <div class="item_a"><a href="">Mattresses</a></div>
+                    </div>
+                </div>
+                <!-- <div id="Living" class="">
+                    <div class="">
+                        1
+                    </div>
+                    <div class="">
+                        2
+                    </div>
+                    <div class="">
+                        3
+                    </div>
+                    <div class="">
+                        4
+
+                    </div>
+                    <div class="">
+                        5
+                    </div>
+                    <div class="">
+                        6
+                    </div>
+                    <div class="">
+                       7
+                    </div>
+                </div> -->
+
+            </div>
+            <div id="Bedroom" class=""></div>
+            <div id="Kids_Room" class=""></div>
+            <div id="Mattresses" class=""></div>
+            <div id="Furnishings" class=""></div>
+            <div id="Decor" class=""></div>
+            <div id="Lighting" class=""></div>
+            <div id="Appliances" class=""></div>
+            <div id="Modular_Furniture" class=""></div>
+        </div>
+
+
+
+        <div id="login">
+            <div>
+                <img src="	https://ii1.pepperfry.com/media/wysiwyg/banners/Web_IMG_2x-reg.jpg" alt="">
+            </div>
+            <div>
+                <div class="log_cancel"><i class="far fa-2x fa-window-close" id="log_cancel"></i></div>
+                <form action="">
+                    <div class="log_margin">
+                        <label for="name" class="log_lable">Name</label><br>
+                        <input type="text" name="name" autocomplete="off" required class="log_input">
+
+
+                    </div>
+                    <div class="log_margin" style="display: flex;">
+                        <div>
+                            <label for="">Mobile Number</label><br>
+                            <input type="number" class="log_input">
+                        </div>
+
+                        <div>
+                            <div class="home-reg-otp-initial">
+                                <a href="" class="">Verify with OTP</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="log_margin">
+                        <label for="">Email ID</label><br>
+                        <input type="email" class="log_input">
+                    </div>
+                    <div class="log_margin">
+                        <label for="">Password</label><br>
+                        <input type="password" class="log_input">
+                    </div>
+                    <div class="log_margin">
+                        <button class="log_register">REGISTER</button>
+
+                    </div>
+
+                </form>
+
+                <div>
+                    <span class="font-12 pf-text-dark-grey pf-center">By registering you agree to our <a
+                            href="https://www.pepperfry.com/terms-of-use.html" target="_BLANK"
+                            class="pf-text-underline">Terms &amp; Conditions</a></span>
+                </div>
+                <div>
+                    <button class="log_exist">Existing User? Log In</button>
+                </div>
+
+                <div>
+                    <span>OR Continue with</span><a href="" id="facebook">
+                        <img class="log_logo" src="https://ii1.pepperfry.com/images/social_login_fb_2x.png" alt=""></a>
+                    <a href="" id="google">
+                        <img class="log_logo" src="https://ii1.pepperfry.com/images/social_login_google_2x.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- pop script -->
+        <script>
+
+            var profile_drop2 = document.getElementById("profile_drop2");
+            profile_drop2.style.display = "none";
+
+
+            var item2 = document.getElementById('profile_button');
+
+
+
+
+            var logo = document.getElementById("facebook");
+            function login1() {
+                var it = "something";
+                localStorage.setItem("login", it);
+                login.style.display = "none";
+            }
+            logo.addEventListener("click", login1);
+
+            var storage_item = localStorage.getItem("login");
+
+
+            var item = document.getElementById('profile_drop');
+            item.style.display = "none"
+
+
+            if (storage_item != null) {
+                function dis_play() {
+                    profile_drop2.style.display = "block";
+                }
+                item2.addEventListener("mouseenter", dis_play);
+                function non_dis_play() {
+                    profile_drop2.style.display = "none"
+                }
+                profile_drop2.addEventListener("mouseleave", non_dis_play);
+
+
+            } else {
+
+
+                function hover_f() {
+                    item.style.display = "block"
+                }
+                item2.addEventListener("mouseenter", hover_f);
+
+                function hover_o() {
+                    item.style.display = "none"
+                }
+                item.addEventListener("mouseleave", hover_o);
+            }
+
+
+
+
+        </script>
+
+        <!-- login script -->
+        <script>
+            var login = document.getElementById("login");
+            login.style.display = "none";
+            var log_regist = document.getElementById("log_regist");
+            function display_content() {
+                login.style.display = "flex";
+            }
+            log_regist.addEventListener("click", display_content);
+            var log_cancel = document.getElementById("log_cancel");
+            function log_can() {
+                login.style.display = "none";
+            }
+            log_cancel.addEventListener("click", log_can);
+        </script>
+        <!-- furniture cript -->
+        <script>
+            var Furniture = document.getElementById("Furniture");
+            Furniture.style.display = "none"
+            function Furniture_hover() {
+                Furniture.style.display = "flex";
+            }
+            function Furniture_leave() {
+                Furniture.style.display = "none";
+            }
+
+            var li_furniture = document.getElementById("li_furniture")
+            li_furniture.addEventListener("mouseenter", Furniture_hover);
+
+            Furniture.addEventListener("mouseleave", Furniture_leave);
+
+
+        </script>
+
+    </header>
+    <!-- ----------------------------this is of prasant---------------------------------------- -->
+    <div id="header">
+        <h4>ALL  ARMS  CHAIRS</h4>
+       <div id="container1">
+            <div class="box">
+                <img src="https://ii3.pepperfry.com/media/catalog/product/v/a/236x260/valeria-armchair-in-provincial-teak-finish-by-woodsworth-valeria-armchair-in-provincial-teak-finish--cnvycd.jpg">
+                <p>Upholstered</p>
+                <p>94 options</p>
+            </div>
+            <div class="box">
+               <img src="https://ii2.pepperfry.com/media/catalog/product/o/r/236x260/oriel-solid-wood-armchair-in-honey-oak-finish-by-woodsworth-oriel-solid-wood-armchair-in-honey-oak-f-1anlzl.jpg">
+               <p>Wooden</p>
+               <p>94 options</p>
+            </div>
+       </div>
+
+    </div>
+    <div id="body_cont">
+        <div id="left">
+           <div class="fltered">
+                <h1>Apply Filters</h1>
+                <hr>
+                <label >Sort by Brand</label>
+                <br>
+                <br>
+                  <div id="brand">
+                      <div class="checkbox">
+                       <input type="checkbox" id="Bohemiana" >
+                       <label  for="Bohemiana">Bohemiana</label>
+                      </div>
+              
+                   <div  class="checkbox">
+                     <input type="checkbox" id="Amberville">
+                     <label for="Amberville">Amberville</label>
+                      
+                   </div>
+                   <div   class="checkbox">
+                       <input type="checkbox" id="Mudramark">
+                        <label for="Mudramark">Mudramark</label>
+                   </div>
+                   <div   class="checkbox">
+                    <input type="checkbox"  id="Woodsworth">
+                    <label for="Woodsworth">Woodsworth</label>
+                   </div>
+                 </div>
+                <br>
+                <label >Sort By price</label>
+                <div id="selling_price">
+                   <div class="checkbox">
+                      <input type="checkbox" id="Less than 10k">
+                      <label for="Less than 10k">Under ₹ 10000</label>
+                   </div>
+                   <div class="checkbox">
+                      <input type="checkbox" id="10k to 20K">
+                      <label for="Less than 10k">10000 to ₹ 20000</label>
+                   </div>
+                   <div class="checkbox">
+                      <input type="checkbox" id="20K and above">
+                      <label for="Less than 10k">Over ₹ 20000</label>
+                   </div>
+                </div>
+                <br>
+                <label >Sort by discount</label>
+                <div id="discount_price">
+                   <div class="checkbox" >
+                      <input type="checkbox" id="ten">
+                      <label for="ten">10 % and above</label>
+                   </div>
+                   <div class="checkbox">
+                      <input type="checkbox" id="ten to twenty">
+                      <label for="ten to twenty">20 % and above</label>
+                   </div>
+                   <div class="checkbox" >
+                      <input type="checkbox" id="twenty and above">
+                      <label for="twenty and above">30 % and above</label>
+                   </div>
+                </div>
+
+
+               </div>
+        </div>
+
+        <div id="right"></div>
+    </div>
+
+    <script>
+        let right_cont=document.getElementById("right");
+      
+        const products=[
+           {
+              name:"Felner Solid Wood Arm Chair In provincial Teak Finish",
+              price:39999,
+              url: "https://ii3.pepperfry.com/media/catalog/product/c/h/236x260/che-lounge-chair-in-wine-colour-che-lounge-chair-in-wine-colour-ns3gwl.jpg"
+              ,brand:"Bohemiana"
+           },
+           {
+              name:"Stigen Solid Wood Armchair in Honey Oak Finis",
+              price:25555,
+              url:"https://ii1.pepperfry.com/media/catalog/product/g/w/236x260/gwyne-armchair-in-provincial-teak-finish-by-amberville-gwyne-armchair-in-provincial-teak-finish-by-a-ihy0fc.jpg"
+              ,brand:"Amberville"
+              
+           },
+           {
+              name:"Vivian ArmChair in Provincial Teak Finish",
+              price:25999,
+              url:"https://ii1.pepperfry.com/media/catalog/product/t/e/236x260/tectona-solid-wood-arm-chair-in-provincial-teak-finish---woodsworth-by-pepperfry-tectona-solid-wood--5ojwgk.jpg"
+             ,brand:"Mudramark"
+           },
+           {
+              name:"Sloka Solid Wood Arm Chair In Honey Oak Finish",
+              price:28999,
+              url:"https://ii1.pepperfry.com/media/catalog/product/v/e/236x260/verito-solid-wood-arm-chair-in-honey-oak-finish-by-bohemiana-verito-solid-wood-arm-chair-in-honey-oa-tlxzoj.jpg"
+              ,brand:"Amberville"
+           },
+           {
+              name:"Anne Solid Wood Armchair In Provincial Teak Finish",
+              price:39999,
+              url:"https://ii2.pepperfry.com/media/catalog/product/e/t/236x260/ethen-solid-wood-arm-chair-in-honey-oak-finish-by-bohemiana-ethen-solid-wood-arm-chair-in-honey-oak--m3q0wl.jpg"
+              ,brand:"Bohemiana"
+           },
+           {
+              name:"Gwyne Armchair In Provincial Teak Finish",
+              price:39999,
+              url:"https://ii2.pepperfry.com/media/catalog/product/o/r/236x260/oriel-solid-wood-armchair-in-honey-oak-finish-by-woodsworth-oriel-solid-wood-armchair-in-honey-oak-f-1anlzl.jpg"
+              ,brand:"Woodsworth"
+           },
+           {
+              name:"Parker Solid Wood Arm Chair In Rustic Teak Finish",
+              price:19999,
+              url:"https://ii3.pepperfry.com/media/catalog/product/e/s/236x260/esvelt-solid-wood-armchair-in-provincial-teak-finish-by-woodsworth-esvelt-solid-wood-armchair-in-pro-hxpejw.jpg"
+              ,brand:"Mudramark"
+           },
+           {
+              name:"Sloka Solid Wood Arm Chair In Honey Oak Finish",
+              price:28999,
+              url:"https://ii2.pepperfry.com/media/catalog/product/a/n/236x260/ancient-india-arm-chair--set-of-2--in-brown-colour-by-dzyn-furnitures-ancient-india-arm-chair--set-o-eh0orz.jpg"
+              ,brand:"Amberville"
+           },
+           {
+              name:"Valeria ArmChair in Provincial Teak Finish",
+              price:25999,
+              url:  "https://ii3.pepperfry.com/media/catalog/product/v/a/236x260/valeria-armchair-in-provincial-teak-finish-by-woodsworth-valeria-armchair-in-provincial-teak-finish--cnvycd.jpg" 
+              ,brand:"Bohemiana"
+           },
+           {
+              name:"Sloka Solid Wood Arm Chair In Honey Oak Finish",
+              price:20999,
+              url:"https://ii1.pepperfry.com/media/catalog/product/o/r/236x260/oriel-solid-wood-armchair-in-rustic-teak-finish-by-woodsworth-oriel-solid-wood-armchair-in-rustic-te-zcvmi6.jpg"
+             ,brand:"Woodsworth"
+           },
+           {
+              name:"Aura Solid Wood Armchair in Provincial Teak Finish",
+              price:10999,
+              url:"https://ii2.pepperfry.com/media/catalog/product/s/t/236x260/stalley-solid-wood-arm-chair-in-rustic-teak-finish-by-amberville-stalley-solid-wood-arm-chair-in-rus-2c6sze.jpg"
+            ,brand:"Amberville"
+           },
+           {
+              name:"Stalley Solid Wood Arm Chair in Rustic Teak Finish",
+              price:13999,
+              url:"https://ii3.pepperfry.com/media/catalog/product/a/u/236x260/aura-solid-wood-armchair-in-provincial-teak-finish-by-woodsworth-aura-solid-wood-armchair-in-provinc-wyrcoj.jpg"
+             ,brand:"Woodsworth"
+           },
+            {
+              name:"Oriel Solid Wood Armchair in Rustic Teak Finish",
+              price:20099,
+              url:"https://ii1.pepperfry.com/media/catalog/product/v/e/236x260/verito-solid-wood-arm-chair-in-honey-oak-finish-by-bohemiana-verito-solid-wood-arm-chair-in-honey-oa-ogh5we.jpg"
+              ,brand:"Bohemiana"
+            },
+           {
+              name:"Esvelt Solid Wood Armchair in Provincial Teak Finish",
+              price:17799,
+              url:"https://ii1.pepperfry.com/media/catalog/product/c/o/236x260/colvill-fabric-arm-chair-in-brown-colour-by-woodsworth-colvill-fabric-arm-chair-in-brown-colour-by-w-c3cdsv.jpg"  
+              ,brand:"Mudramark"
+           },
+           {
+              name:"Ethen Solid Wood Arm Chair In Honey Oak Finish",
+              price:29999,
+              url:"https://ii2.pepperfry.com/media/catalog/product/a/n/236x260/anne-solid-wood-armchair-in-provincial-teak-finish-by-amberville-anne-solid-wood-armchair-in-provinc-lzzkvh.jpg"
+              ,brand:"Woodsworth"
+           },
+           {
+              name:"Tectona Solid Wood Arm Chair In Provincial Teak Finish",
+              price:19999,
+              url:"https://ii3.pepperfry.com/media/catalog/product/m/i/236x260/milton-solid-wood-armchair-by-woodsworth-milton-solid-wood-armchair-by-woodsworth-igezyq.jpg"
+              ,brand:"Bohemiana"
+           },
+           {
+              name:"Bolivar Lounge Chair In Purple Colour",
+              price:24999,
+              url:"https://ii2.pepperfry.com/media/catalog/product/a/n/236x260/anne-solid-wood-armchair-in-provincial-teak-finish-by-amberville-anne-solid-wood-armchair-in-provinc-lzzkvh.jpg"
+              ,brand:"Woodsworth"
+           },
+           {
+              name:"Oriel Solid Wood Armchair in Honey oak Finish",
+              price:14499,
+              url:"https://ii2.pepperfry.com/media/catalog/product/z/e/236x260/zenith-solid-wood-armchair-in-provincial-teak-finish-by-amberville-zenith-solid-wood-armchair-in-pro-seemxm.jpg"
+               ,brand:"Mudramark"
+             },
+           {
+              name:"Rezzan Solid Wood Arm Chair In Honey Oak Finish",
+              price:34999,
+              url:"https://ii3.pepperfry.com/media/catalog/product/v/e/236x260/verito-solid-wood-arm-chair-in-honey-oak-finish-by-bohemiana-verito-solid-wood-arm-chair-in-honey-oa-zkzmh8.jpg"
+              ,brand:"Amberville"    
+           },
+           {
+              name:"Oriel Solid Wood Arm Chair in Ocean Blue Finish",
+              price:18499,
+              url:"https://ii1.pepperfry.com/media/catalog/product/w/i/236x260/william-solid-wood-armchair-in-passion-mahogany-finish-by-amberville-william-solid-wood-armchair-in--mccyli.jpg"
+               ,brand:"Woodsworth"
+           },
+           {
+            name:" Elton  Armchair  In  Blue  Distress  Finish",
+            price:20999,
+            url:"https://ii2.pepperfry.com/media/catalog/product/e/l/236x260/elton-armchair-in-blue-distress-finish-by-bohemiana-elton-armchair-in-blue-distress-finish-by-bohemi-talyqs.jpg"
+            ,brand:"Woodsworth"
+           },
+      ]
+                 const product_storage=JSON.stringify(products);
+      
+               localStorage.setItem("myProduct",product_storage)
+           
+      
+               let product_items=localStorage.getItem("myProduct");
+               product_items=JSON.parse(product_items)
+            
+             localStorage.setItem("view_product",JSON.stringify([]));
+      
+               var div_right=document.getElementById("right");
+               var i=0;
+               function showItems() {
+                
+               
+                     product_items.forEach(function (product) {
+      
+                     let div_el=document.createElement("div")
+                      div_el.setAttribute("Id",`id_${i}`)
+                       i++;
+                      div_el.setAttribute("style","margin:5px")
+      
+                     let p_name=document.createElement("p");
+                     p_name.innerText=product.name;
+                     p_name.setAttribute("style","margin-left:10px")
+      
+                      let brand_box=document.createElement("div")
+                     let brand=document.createElement("div")
+                     brand.innerHTML=`${product.brand} by pepperfry`
+                     brand.setAttribute("style","color:#9E9E9E")
+      
+                     let wish_box=document.createElement("div")
+                     let wishlist_btn=document.createElement("img")
+                     wishlist_btn.src="https://static.thenounproject.com/png/3386813-200.png"
+                     wishlist_btn.setAttribute("style","height:30px;width:30px;position:relative;bottom:4px;")
+                     wish_box.append(wishlist_btn)
+                     brand_box.append(brand,wish_box)
+                     brand_box.setAttribute("style","height:40px;display:grid;grid-template-columns:88% 12%;")
+      
+      
+                    
+                     let p_price=document.createElement("span");
+                     p_price.innerText=`₹ ${product.price}`;
+                     p_price.setAttribute("style","margin-left:10px;text-decoration:line-through;margin-top:0px")
+      
+                     let discount=document.createElement("span")
+                     let discount_percentage=Math.floor((Math.random()*30+10))
+                     let discount_price=Math.floor((discount_percentage/100)*product.price)
+                     let net_price=Number(product.price)-discount_price;
+                     product["netPrice"]=net_price;
+                    
+                     discount.innerHTML=`₹ ${net_price}`;
+                     discount.setAttribute("style","margin-left:5px;")
+      
+                     let saving=document.createElement("p")
+                     saving.innerHTML=`Save ₹ ${discount_price}(${discount_percentage}% Off),Limited Time Offer`
+                     saving.setAttribute("style","color:#9E9E9E;margin:0px 10px")
+      
+                     let remarks=document.createElement("p")
+                     remarks.innerHTML=`Extra Cashback Worth ₹ ${Math.floor(Math.random()*1000+3000)}`
+                     remarks.setAttribute("style","margin:10px;color:#304FFE")
+      
+                     let ship_box=document.createElement('div')
+                     let ship_img=document.createElement("img");
+                     ship_img.src="	https://ii1.pepperfry.com/images/svg/clip-exp-ship-icon-2018.svg"
+                     ship_img.setAttribute("style","height:30px;width:30px;")
+                     let shiping_day=document.createElement("div")
+                     shiping_day.innerHTML="Ships in 2 days"
+      
+                     ship_box.append(ship_img,shiping_day)
+                     ship_box.setAttribute("style","height:40px;display:grid;grid-template-columns:12% 88%;margin-top:-2px;")
+      
+                     
+      
+      
+                     let price_box=document.createElement("div")
+                     price_box.append(discount,p_price)
+      
+      
+      
+                     let div_btn=document.createElement("div")
+                     let cart_btn=document.createElement("button")
+                     cart_btn.innerHTML="Add to cart"
+                     cart_btn.setAttribute("style","background-color:#FAFAFA;font-weight:bolder;")
+                     
+                     div_btn.append(cart_btn)
+                     div_btn.setAttribute("style","visibility:hidden")
+      
+                     let div_img=document.createElement("div")
+                     let p_image=document.createElement("img");
+                     p_image.src=product.url;
+                     div_img.append(p_image,div_btn)
+                     div_img.setAttribute("style","margin:10px;overflow:hidden")
+      
+      
+                     div_img.addEventListener("mouseover",function () {
+                         p_image.setAttribute("style","transform:scale(1.12)")
+                      div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:30px;background-color:#FAFAFA;")
+                     });
+                      div_img.addEventListener("mouseleave",function () {
+                      p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
+                      div_btn.setAttribute("style","visibility:hidden")
+                     });
+                    
+                     let details_div=document.createElement("div")
+                     details_div.append(p_name,brand_box,price_box,saving,remarks,ship_box)
+                     details_div.setAttribute("style","position:relative;bottom:40px;margin-bottom:10px")
+                   
+                     
+                    
+                     div_el.append(div_img,details_div)
+                     
+                     div_right.append(div_el)
+      
+      
+                    cart_btn.onclick=function () {
+                        addtoCart(product);
+                      }
+      
+                      wishlist_btn.onclick=function(){
+                          wishlist_btn.src="https://img.icons8.com/emoji/452/red-heart.png"
+                         wishlist_cart(product)
+                      }
+          
+                  })
+                
+             
+              }
+               showItems()
+               
+          
+               if(localStorage.getItem("cart") ===null){
+                  localStorage.setItem("cart",JSON.stringify([]));
+               }
+      
+               var cart_data=JSON.parse(localStorage.getItem("cart"));
+      
+               function addtoCart(p) {
+                      if(cart_data.includes(p)){
+                           alert("Item is already in cart")
+                       }else{
+                           cart_data.push(p)
+                           alert("Added to cart")
+                           }
+                  
+               localStorage.setItem("cart",JSON.stringify(cart_data))
+               
+              }
+      
+              if(localStorage.getItem("wishlist") ===null){
+                  localStorage.setItem("wishlist",JSON.stringify([]));
+               }
+              var wishlist_data=JSON.parse(localStorage.getItem("wishlist"));
+      
+              function wishlist_cart(p) {
+                      if(wishlist_data.includes(p)){
+                           alert("Item is already in wishlist")
+                       }else{
+                           wishlist_data.push(p)
+                           alert("Added to wishlist")
+                           }
+                  
+               localStorage.setItem("wishlist",JSON.stringify(wishlist_data))
+               
+              }
+              
+      
+             var check_bohemiana=document.getElementById("Bohemiana")
+             check_bohemiana.addEventListener("click",function () {
+                       
+              
+        
+               let product_items=localStorage.getItem("myProduct");
+               product_items=JSON.parse(product_items)
+      
+               let arr=[];
+      
+               if(check_bohemiana.checked==true){
+                   document.getElementById("right").innerHTML="";
+               for (let i = 0; i <product_items.length; i++) {
+                 if(product_items[i].brand=="Bohemiana"){
+                    arr.push(product_items[i])
+                 }
+               
+               }
+            }else {
+               showItems();
+            }
+            localStorage.setItem("arr",JSON.stringify(arr))
+            checked_arr=JSON.parse(localStorage.getItem("arr"));
+            checked_arr.forEach(function (product) {
+               let div_right=document.getElementById("right");
+      
+                     let div_el=document.createElement("div")
+                      div_el.setAttribute("Id",`id_${i}`)
+                       i++;
+                      div_el.setAttribute("style","margin:5px")
+      
+                     let p_name=document.createElement("p");
+                     p_name.innerText=product.name;
+                     p_name.setAttribute("style","margin-left:10px")
+      
+                      let brand_box=document.createElement("div")
+                     let brand=document.createElement("div")
+                     brand.innerHTML=`${product.brand} by pepperfry`
+                     brand.setAttribute("style","color:#9E9E9E")
+      
+                     let wish_box=document.createElement("div")
+                     let wishlist_btn=document.createElement("img")
+                     wishlist_btn.src="https://static.thenounproject.com/png/3386813-200.png"
+                     wishlist_btn.setAttribute("style","height:30px;width:30px;position:relative;bottom:4px;")
+                     wish_box.append(wishlist_btn)
+                     brand_box.append(brand,wish_box)
+                     brand_box.setAttribute("style","height:40px;display:grid;grid-template-columns:88% 12%;")
+      
+      
+                    
+                     let p_price=document.createElement("span");
+                     p_price.innerText=`₹ ${product.price}`;
+                     p_price.setAttribute("style","margin-left:10px;text-decoration:line-through;margin-top:0px")
+      
+                     let discount=document.createElement("span")
+                     let discount_percentage=Math.floor((Math.random()*30+10))
+                     let discount_price=Math.floor((discount_percentage/100)*product.price)
+                     let net_price=Number(product.price)-discount_price;
+                     product["netPrice"]=net_price;
+                    
+                     discount.innerHTML=`₹ ${net_price}`;
+                     discount.setAttribute("style","margin-left:5px;")
+      
+                     let saving=document.createElement("p")
+                     saving.innerHTML=`Save ₹ ${discount_price}(${discount_percentage}% Off),Limited Time Offer`
+                     saving.setAttribute("style","color:#9E9E9E;margin:0px 10px")
+      
+                     let remarks=document.createElement("p")
+                     remarks.innerHTML=`Extra Cashback Worth ₹ ${Math.floor(Math.random()*1000+3000)}`
+                     remarks.setAttribute("style","margin:10px;color:#304FFE")
+      
+                     let ship_box=document.createElement('div')
+                     let ship_img=document.createElement("img");
+                     ship_img.src="	https://ii1.pepperfry.com/images/svg/clip-exp-ship-icon-2018.svg"
+                     ship_img.setAttribute("style","height:30px;width:30px;")
+                     let shiping_day=document.createElement("div")
+                     shiping_day.innerHTML="Ships in 2 days"
+      
+                     ship_box.append(ship_img,shiping_day)
+                     ship_box.setAttribute("style","height:40px;display:grid;grid-template-columns:12% 88%;margin-top:-2px;")
+      
+                     let price_box=document.createElement("div")
+                     price_box.append(discount,p_price)
+      
+      
+                     let div_btn=document.createElement("div")
+                     let cart_btn=document.createElement("button")
+                     cart_btn.innerHTML="Add to cart"
+                     cart_btn.setAttribute("style","background-color:#FAFAFA;font-weight:bolder;")
+                     
+                     div_btn.append(cart_btn)
+                     div_btn.setAttribute("style","visibility:hidden")
+      
+                     let div_img=document.createElement("div")
+                     let p_image=document.createElement("img");
+                     p_image.src=product.url;
+                     div_img.append(p_image,div_btn)
+                     div_img.setAttribute("style","margin:10px;overflow:hidden")
+      
+      
+                     div_img.addEventListener("mouseover",function () {
+                         p_image.setAttribute("style","transform:scale(1.12)")
+                      div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:30px;background-color:#FAFAFA;")
+                     });
+                      div_img.addEventListener("mouseleave",function () {
+                      p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
+                      div_btn.setAttribute("style","visibility:hidden")
+                     });
+                    
+                     let details_div=document.createElement("div")
+                     details_div.append(p_name,brand_box,price_box,saving,remarks,ship_box)
+                     details_div.setAttribute("style","position:relative;bottom:40px;margin-bottom:10px")
+                                
+                     div_el.append(div_img,details_div)
+                     
+                     div_right.append(div_el)
+      
+                     cart_btn.onclick=function () {
+                        addtoCart(product);
+                      }
+      
+                       wishlist_btn.onclick=function(){
+                        wishlist_btn.src="https://img.icons8.com/emoji/452/red-heart.png"
+                        wishlist_cart(product)
+                      }
+          
+          
+                  })
+      
+      
+             })
+              var check_amberville=document.getElementById("Amberville")
+              check_amberville.addEventListener("click",function () {
+                       
+      
+        
+               let product_items=localStorage.getItem("myProduct");
+               product_items=JSON.parse(product_items)
+      
+               let arr_amberville=[];
+      
+               if(check_amberville.checked==true){
+                      document.getElementById("right").innerHTML="";
+               for (let i = 0; i <product_items.length; i++) {
+                 if(product_items[i].brand=="Amberville"){
+                    arr_amberville.push(product_items[i])
+                 }
+               
+               }
+            }else{
+               showItems()
+            }
+            localStorage.setItem("arr_amberville",JSON.stringify(arr_amberville))
+            checked_amberville=JSON.parse(localStorage.getItem("arr_amberville"));
+            checked_amberville.forEach(function (product) {
+               var div_right=document.getElementById("right");
+      
+                     let div_el=document.createElement("div")
+                      div_el.setAttribute("Id",`id_${i}`)
+                       i++;
+                      div_el.setAttribute("style","margin:5px")
+      
+                     let p_name=document.createElement("p");
+                     p_name.innerText=product.name;
+                     p_name.setAttribute("style","margin-left:10px")
+      
+                      let brand_box=document.createElement("div")
+                     let brand=document.createElement("div")
+                     brand.innerHTML=`${product.brand} by pepperfry`
+                     brand.setAttribute("style","color:#9E9E9E")
+      
+                     let wish_box=document.createElement("div")
+                     let wishlist_btn=document.createElement("img")
+                     wishlist_btn.src="https://static.thenounproject.com/png/3386813-200.png"
+                     wishlist_btn.setAttribute("style","height:30px;width:30px;position:relative;bottom:4px;")
+                     wish_box.append(wishlist_btn)
+                     brand_box.append(brand,wish_box)
+                     brand_box.setAttribute("style","height:40px;display:grid;grid-template-columns:88% 12%;")
+      
+      
+                    
+                     let p_price=document.createElement("span");
+                     p_price.innerText=`₹ ${product.price}`;
+                     p_price.setAttribute("style","margin-left:10px;text-decoration:line-through;margin-top:0px")
+      
+                     let discount=document.createElement("span")
+                     let discount_percentage=Math.floor((Math.random()*30+10))
+                     let discount_price=Math.floor((discount_percentage/100)*product.price)
+                     let net_price=Number(product.price)-discount_price;
+                     product["netPrice"]=net_price;
+                    
+                     discount.innerHTML=`₹ ${net_price}`;
+                     discount.setAttribute("style","margin-left:5px;")
+      
+                     let saving=document.createElement("p")
+                     saving.innerHTML=`Save ₹ ${discount_price}(${discount_percentage}% Off),Limited Time Offer`
+                     saving.setAttribute("style","color:#9E9E9E;margin:0px 10px")
+      
+                     let remarks=document.createElement("p")
+                     remarks.innerHTML=`Extra Cashback Worth ₹ ${Math.floor(Math.random()*1000+3000)}`
+                     remarks.setAttribute("style","margin:10px;color:#304FFE")
+      
+                     let ship_box=document.createElement('div')
+                     let ship_img=document.createElement("img");
+                     ship_img.src="	https://ii1.pepperfry.com/images/svg/clip-exp-ship-icon-2018.svg"
+                     ship_img.setAttribute("style","height:30px;width:30px;")
+                     let shiping_day=document.createElement("div")
+                     shiping_day.innerHTML="Ships in 2 days"
+      
+                     ship_box.append(ship_img,shiping_day)
+                     ship_box.setAttribute("style","height:40px;display:grid;grid-template-columns:12% 88%;margin-top:-2px;")
+      
+                     let price_box=document.createElement("div")
+                     price_box.append(discount,p_price)
+      
+      
+                     let div_btn=document.createElement("div")
+                     let cart_btn=document.createElement("button")
+                     cart_btn.innerHTML="Add to cart"
+                     cart_btn.setAttribute("style","background-color:#FAFAFA;font-weight:bolder;")
+                     
+                     div_btn.append(cart_btn)
+                     div_btn.setAttribute("style","visibility:hidden")
+      
+                     let div_img=document.createElement("div")
+                     let p_image=document.createElement("img");
+                     p_image.src=product.url;
+                     div_img.append(p_image,div_btn)
+                     div_img.setAttribute("style","margin:10px;overflow:hidden")
+      
+      
+                     div_img.addEventListener("mouseover",function () {
+                         p_image.setAttribute("style","transform:scale(1.12)")
+                      div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:30px;background-color:#FAFAFA;")
+                     });
+                      div_img.addEventListener("mouseleave",function () {
+                      p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
+                      div_btn.setAttribute("style","visibility:hidden")
+                     });
+                    
+                     let details_div=document.createElement("div")
+                     details_div.append(p_name,brand_box,price_box,saving,remarks,ship_box)
+                     details_div.setAttribute("style","position:relative;bottom:40px;margin-bottom:10px")
+                                
+                     div_el.append(div_img,details_div)
+                     
+                     div_right.append(div_el)
+      
+                     cart_btn.onclick=function () {
+                        addtoCart(product);
+                      }
+      
+                       wishlist_btn.onclick=function(){
+                        wishlist_btn.src="https://img.icons8.com/emoji/452/red-heart.png"
+                        wishlist_cart(product)
+                      }
+          
+          
+                  })
+      
+      
+             })
+              
+               
+      </script>
+
+
+
+
+
+
+
+
+
+                        <!-- tejash cartpopup code from here -->
+
+
+
+
+
+
+
+
+
+
+                        <div id="main" class="main_div">
+            
+
+            
+                            <div id="popup">
+                                <div id="blank"></div>
+                                <div id="cart_pop">
+                                    <div id="head_cart">
+                                        Showing Availability At <input  id="pin" type="text"/> Check <div id="close_btn">
+                                            <img style="max-width: 100%; max-height: 100%;" src="https://themonkstudio.com/images/Icon-close-thin.png" alt="">
+                                            </div>
+                                            <div class="btns">
+                                                <div class="btns_btn" id="mycart">MY CART <div class="items_count" id="cart_count"></div></div>
+                                                <div class="btns_btn" id="mywishlist">MY WISHLIST <div class="items_count" id="wish_count"></div></div>
+                                                <div class="btns_btn" id="recent">RECENTLY VIEWED</div>
+                                            </div>
+                                    </div>
+                                 <div class="body_cart">
+                                     <div class="empty" id="emptyRecent_div">
+                                         <img src="https://www.pepperfry.com/images/svg/empty-recently-view.svg" alt="empty product">
+                                         <p>Nothing To Display Here!</p>
+                                         <p  id="recent_btn">START SHOPPING</p>
+                                     </div>
+                                     <div class="empty" id="emotyWishlist_div">
+                                         <img src="https://www.pepperfry.com/images/svg/empty-wishlist.svg" alt="empty wishlist">
+                                         <p>You Haven't Added Any Item
+                                            To Your Wishlist</p>
+                                            <p id="wishlist_btn">START WISHING 🙂</p>
+                                     </div>
+                                     <div class="empty" id="emptCart_div">
+                                         <img src="https://www.pepperfry.com/images/svg/empty-cart.svg" alt="empty cart">
+                                         <p>Your Shopping Cart Is Empty</p>
+                                         <p id="cart_btn">CONTINUE SHOPPING</p>
+                                     </div>
+                                     <div class=popup_content>
+                                        <div class="pop_content" id="cart_content">
+                                            <a href="">
+                                                <div class="checkout_btn">PROCEED TO PAY SECURELY</div>
+                                            </a>
+                                        </div>
+                                        <div class="pop_content" id="wish_content"></div>
+                                        
+                
+                                     </div>
+                                 </div>
+                                </div>
+                            </div>
+                
+                
+                        </div>
+
+
+
+                        <script>
+   
+
+                            function show1(){
+                                document.getElementById("popup").style.display = "flex";
+                                
+                            }
+                        
+                            document.getElementById("blank").addEventListener("click", hide);
+                            document.getElementById("close_btn").addEventListener("click", hide);
+                        
+                            function hide() {
+                                document.getElementById("popup").style.display = "none";
+                                
+                            }
+                        
+                            document.getElementById("recent_btn").addEventListener("click", hide);
+                            document.getElementById("cart_btn").addEventListener("click", hide);
+                            document.getElementById("wishlist_btn").addEventListener("click", hide);
+                            document.getElementById("mywishlist").addEventListener("click", openWishlist);
+                            document.getElementById("recent").addEventListener("click", openRecent);
+                            document.getElementById("mycart").addEventListener("click", openCart);
+                        
+                            function openRecent(){
+                                document.getElementById("recent").style.background = "#fff";
+                                document.getElementById("recent").style.color = "#000";
+                                document.getElementById("emptyRecent_div").style.display = "block";
+                        
+                                document.getElementById("mywishlist").style.background = "#000";
+                                document.getElementById("mywishlist").style.color = "#fff";
+                                document.getElementById("emotyWishlist_div").style.display = "none";
+                                document.getElementById("cart_content").style.display = "none";
+                                document.getElementById("wish_content").style.display = "none";
+                        
+                                document.getElementById("mycart").style.background = "#000";
+                                document.getElementById("mycart").style.color = "#fff";
+                                document.getElementById("emptCart_div").style.display = "none";
+                                
+                                document.getElementById("wish_count").style.background = "#fff";
+                                document.getElementById("wish_count").style.color = "#969696";
+                        
+                                document.getElementById("cart_count").style.background = "#fff";
+                                document.getElementById("cart_count").style.color = "#969696";
+                        
+                            }
+                            function openWishlist(){
+                                
+                                let wishlist_data = JSON.parse(localStorage.getItem("wishlist"))
+                                if(wishlist_data.length>0){
+                                   
+                                                
+                                    let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
+                                    let wish_content = document.getElementById("wish_content");
+                                  
+                                    wishlist_data.forEach(function(product){
+                                      
+                        
+                                        let pop_pro_div=document.createElement("div");
+                                        pop_pro_div.setAttribute("class","pop_product");
+                        
+                                        let img_div = document.createElement("div");
+                                        img_div.setAttribute("class","pop_imgs");
+                                        let popImage = document.createElement("img");
+                                        popImage.src = product.url;
+                                        img_div.append(popImage);
+                        
+                                        let p_name = document.createElement("p");
+                                        p_name.innerText=product.name+" "+product.brand+"...";
+                                        p_name.setAttribute("class","prod_bold")
+                        
+                                        let retail_price = document.createElement("div");
+                                        let retail_price1 = document.createElement("div");
+                                        let retail_price2 = document.createElement("div");
+                                        retail_price1.innerHTML ="Retail Price ";
+                                        retail_price2.innerHTML ="₹ "+product.price;
+                                        retail_price.append(retail_price1,retail_price2);
+                                        retail_price2.setAttribute("style","padding-left:40px;text-decoration:line-through;");
+                                        retail_price.setAttribute("style","display:flex");
+                                        retail_price.setAttribute("class","gray_small opx");
+                        
+                                        let p_price_d = document.createElement("div");
+                                        let p_price_d1 = document.createElement("div");
+                                        let p_price_d2 = document.createElement("div");
+                                        p_price_d1.innerHTML = "Offer Price";
+                                        p_price_d2.innerHTML = "₹ "+ product.netPrice;
+                                        p_price_d.append(p_price_d1,p_price_d2);
+                                        p_price_d2.setAttribute("style","padding-left:40px;font-weight:600;color:black;");
+                                        p_price_d.setAttribute("style","display:flex");
+                                        p_price_d.setAttribute("class","gray_small opx");
+                        
+                                        let moveMain = document.createElement("div");
+                                        let move_to1 = document.createElement("p");
+                                        let move_to = document.createElement("p");
+                                        move_to1.innerText = "Add to cart";
+                                        move_to.innerText = "Remove   ";
+                                        moveMain.append(move_to1,move_to);
+                                        move_to1.setAttribute("class","gray_small leftff");
+                                        move_to1.setAttribute("style","margin-left:80px;text-decoration: underline;margin-top:16px;");
+                                        move_to.setAttribute("style","text-decoration: underline;margin-top:16px;")
+                                        move_to.setAttribute("class","gray_small leftff");
+                                        moveMain.setAttribute("class","leftff");
+                        
+                                        pop_pro_div.append(img_div,p_name,retail_price,p_price_d,moveMain);
+                                        wish_content.append(pop_pro_div);
+                                    });
+                        
+                                    document.getElementById("wish_content").style.display = "block";
+                        
+                                }else{
+                                    document.getElementById("emotyWishlist_div").style.display = "block";
+                                    document.getElementById("wish_count").style.display = "none";
+                                }
+                                document.getElementById("mywishlist").style.background = "#fff";
+                                document.getElementById("mywishlist").style.color = "#000";
+                                
+                        
+                                document.getElementById("recent").style.background = "#000";
+                                document.getElementById("recent").style.color = "#fff";
+                                document.getElementById("emptyRecent_div").style.display = "none";
+                        
+                                document.getElementById("mycart").style.background = "#000";
+                                document.getElementById("mycart").style.color = "#fff";
+                                document.getElementById("emptCart_div").style.display = "none";
+                        
+                                document.getElementById("wish_count").style.background = "#f16521";
+                                document.getElementById("wish_count").style.color = "#fff";
+                        
+                                document.getElementById("cart_count").style.background = "#fff";
+                                document.getElementById("cart_count").style.color = "#969696";
+                        
+                                document.getElementById("cart_content").style.display = "none";
+                            }
+                        
+                            function openCart(){
+                                let cart_data = JSON.parse(localStorage.getItem("cart"));
+                                if(cart_data.length>0){
+                        
+                                    let cart_data = JSON.parse(localStorage.getItem("cart"));
+                                    var cart_content = document.getElementById("cart_content");
+                        
+                                    cart_data.forEach(function(product){
+                        
+                        
+                                        let pop_pro_div=document.createElement("div");
+                                        pop_pro_div.setAttribute("class","pop_product");
+                        
+                                        let img_div = document.createElement("div");
+                                        img_div.setAttribute("class","pop_imgs");
+                                        let popImage = document.createElement("img");
+                                        popImage.src = product.url;
+                                        img_div.append(popImage);
+                        
+                                        let p_name = document.createElement("p");
+                                        p_name.innerText=product.name+" "+product.brand+"...";
+                                        p_name.setAttribute("class","prod_bold")
+                        
+                                        let retail_price = document.createElement("div");
+                                        let retail_price1 = document.createElement("div");
+                                        let retail_price2 = document.createElement("div");
+                                        retail_price1.innerHTML ="Retail Price ";
+                                        retail_price2.innerHTML ="₹ "+product.price;
+                                        retail_price.append(retail_price1,retail_price2);
+                                        retail_price2.setAttribute("style","padding-left:40px;text-decoration:line-through;");
+                                        retail_price.setAttribute("style","display:flex");
+                                        retail_price.setAttribute("class","gray_small opx");
+                        
+                                        let p_price_d = document.createElement("div");
+                                        let p_price_d1 = document.createElement("div");
+                                        let p_price_d2 = document.createElement("div");
+                                        p_price_d1.innerHTML = "Offer Price";
+                                        p_price_d2.innerHTML = "₹ "+ product.netPrice;
+                                        p_price_d.append(p_price_d1,p_price_d2);
+                                        p_price_d2.setAttribute("style","padding-left:40px;font-weight:600;color:black;");
+                                        p_price_d.setAttribute("style","display:flex");
+                                        p_price_d.setAttribute("class","gray_small opx");
+                        
+                                        let moveMain = document.createElement("div");
+                                        let move_to1 = document.createElement("p");
+                                        let move_to = document.createElement("p");
+                                        move_to1.innerText = "Move To Wishlist   ";
+                                        move_to.innerText = "Remove   ";
+                                        moveMain.append(move_to1,move_to);
+                                        move_to1.setAttribute("class","gray_small leftff");
+                                        move_to1.setAttribute("style","margin-left:80px;text-decoration: underline;margin-top:16px;");
+                                        move_to.setAttribute("style","text-decoration: underline;margin-top:16px;")
+                                        move_to.setAttribute("class","gray_small leftff");
+                                        moveMain.setAttribute("class","leftff");
+                        
+                                        pop_pro_div.append(img_div,p_name,retail_price,p_price_d,moveMain);
+                                        cart_content.append(pop_pro_div);
+                        
+                                    });
+                        
+                        
+                        
+                                    document.getElementById("cart_content").style.display = "block";
+                        
+                        
+                        
+                                }else{
+                                    document.getElementById("emptCart_div").style.display = "block";
+                                    document.getElementById("cart_count").style.display = "none";
+                                    
+                                }
+                                document.getElementById("mycart").style.background = "#fff";
+                                document.getElementById("mycart").style.color = "#000";
+                                
+                        
+                                document.getElementById("recent").style.background = "#000";
+                                document.getElementById("recent").style.color = "#fff";
+                                document.getElementById("emptyRecent_div").style.display = "none";
+                        
+                                document.getElementById("mywishlist").style.background = "#000";
+                                document.getElementById("mywishlist").style.color = "#fff";
+                                document.getElementById("emotyWishlist_div").style.display = "none";
+                                document.getElementById("wish_content").style.display = "none";
+                        
+                                document.getElementById("wish_count").style.background = "#fff";
+                                document.getElementById("wish_count").style.color = "#969696";
+                        
+                                document.getElementById("cart_count").style.background = "#f16521";
+                                document.getElementById("cart_count").style.color = "#fff";
+                                
+                                
+                            }
+                            
+                            function count(){
+                            let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
+                            let cart_data = JSON.parse(localStorage.getItem("cart"));
+                               if(wishlist_data.length==0){
+                                   document.getElementById("wish_count").style.display = "none";
+                               }
+                               if(cart_data.length==0){
+                                document.getElementById("cart_count").style.display = "none";
+                               }
+                               
+                           }
+                        
+                        
+                        
+                           {
+                            let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
+                            let cart_data = JSON.parse(localStorage.getItem("cart"));
+                            let cart_count = document.getElementById("cart_count");
+                                let length = cart_data.length;
+                                cart_count.append(length);
+                            let wish = document.getElementById("wish_count");
+                            let length1 = wishlist_data.length;
+                            wish.append(length1);
+                            
+                           }
+                            
+                           
+                           
+                            
+                        </script>
+
+</body>
+
+</html>
