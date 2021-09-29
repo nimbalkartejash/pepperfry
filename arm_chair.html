@@ -447,6 +447,13 @@
        margin-top: 6px;
        margin-left: 8px;
     }
+    .DivBtn{
+        background-color: #EEEEEE;
+        visibility:hidden;
+        opacity: 80%;
+        
+        
+    }
 
 
 
@@ -628,7 +635,13 @@
             .checkout_btn p{
                 margin: auto;
             }
-
+            .addToCart{
+                background-color:#FAFAFA;
+                font-weight:bolder;
+                border:0.5px solid black;
+                font-size: 10px;
+                padding: 8px 25px;
+            }
 
 
 
@@ -1382,22 +1395,22 @@
       
                      let div_btn=document.createElement("div")
                      let cart_btn=document.createElement("button")
-                     cart_btn.innerHTML="Add to cart"
-                     cart_btn.setAttribute("style","background-color:#FAFAFA;font-weight:bolder;")
+                     cart_btn.innerHTML="ADD TO CART"
+                     cart_btn.setAttribute("class","addToCart")
                      
                      div_btn.append(cart_btn)
-                     div_btn.setAttribute("style","visibility:hidden")
+                     div_btn.setAttribute("class","DivBtn")
       
                      let div_img=document.createElement("div")
                      let p_image=document.createElement("img");
                      p_image.src=product.url;
                      div_img.append(p_image,div_btn)
-                     div_img.setAttribute("style","margin:10px;overflow:hidden")
+                     div_img.setAttribute("style","margin:10px;overflow:hidden;padding: 0px;")
       
       
                      div_img.addEventListener("mouseover",function () {
                          p_image.setAttribute("style","transform:scale(1.12)")
-                      div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:30px;background-color:#FAFAFA;")
+                      div_btn.setAttribute("style","display:block;text-align:center;position:relative;bottom:30px;background-color:#FAFAFA;visibility: visible;")
                      });
                       div_img.addEventListener("mouseleave",function () {
                       p_image.setAttribute("style","transition:0.7s all ease-in-out;overflow:hidden;margin:0 auto;width:100%")
@@ -1438,13 +1451,8 @@
                var cart_data=JSON.parse(localStorage.getItem("cart"));
       
                function addtoCart(p) {
-                      if(cart_data.includes(p)){
-                           alert("Item is already in cart")
-                       }else{
-                           cart_data.push(p)
-                           alert("Added to cart")
-                           }
-                  
+                show1();
+                  openCart()
                localStorage.setItem("cart",JSON.stringify(cart_data))
                
               }
