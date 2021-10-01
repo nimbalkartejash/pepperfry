@@ -1,0 +1,96 @@
+
+   
+
+
+body{
+	text-align: center !important;
+}
+p{
+	margin-top: 20px;
+	font-size: 16px;
+    font-weight: 500;
+}
+input{
+	text-align: center;
+}
+.mssg{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+#parent{
+    justify-content: center;
+    
+}
+
+
+
+#container{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  margin-top: 80px;
+  /* margin-right: 300px; */
+    /* margin: auto; */
+    /* border: 1px solid black; */
+    display: flex;
+    /* justify-content: center; */
+    padding: 10px;
+    line-height: 30px;
+
+}
+
+#left{
+    width: 40%;
+    /* border: 1px solid red; */
+     margin-left: 10px;
+}
+#left>img{
+width: 100%;
+
+}
+#right{
+    width: 50%;
+    /* border: 1px solid blue; */
+    margin-left: 10px;
+    margin-top: 50px;
+}
+#right>form{
+    margin-left: 50px;
+    width: 250px;
+    height: 40px;
+}
+
+#container_pic{
+    margin-top: 50px;
+    height: 430px;
+    background-image: url("https://ii1.pepperfry.com/images/new_login_modal_bg_2020.jpg");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    width: 40%;
+    margin-left:auto;
+    margin-right: auto;
+    border: 1px solid  white;
+
+}
+#form-group>form{
+    
+    width:240px;
+    margin-top: 80px;
+    /* border: 1px solid black; */
+    margin-left: 50%;
+    height: 350px;
+    line-height: 30px;
+
+    
+}
+
+#login_btn,#reg_btn,#change_btn{
+    /* background-color:#eaad44; */
+    background-color: rgb(245, 98, 45);
+    color: white;
+    line-height: 30px;
+    width: 230px;
+}
