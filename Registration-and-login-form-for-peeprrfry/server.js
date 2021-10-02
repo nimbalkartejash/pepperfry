@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-
-mongoose.connect('mongodb+srv://anup:anup-pandey@cluster0.rcdx6.mongodb.net/Database3?retryWrites=true&w=majority', {
+app.use(express.json());
+mongoose.connect('mongodb+srv://ravi_kumar:4uATDeP87brPLwe4@cluster0.ohbas.mongodb.net/pepperfry_database?retryWrites=true&w=majority', {
   // useNewUrlParser: true,
   // useUnifiedTopology: true
 }, (err) => {
@@ -18,6 +18,7 @@ mongoose.connect('mongodb+srv://anup:anup-pandey@cluster0.rcdx6.mongodb.net/Data
     console.log('Error in DB connection : ' + err);
   }
 });
+
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -40,6 +41,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname + '/views'));
+
+//------------------link for homepage------------------------------
+app.get("/pepperfry", (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, "./views", 'final_index.html'))
+})
+const productController = require("./controller/armChair.controller")
+
+app.use("/products", productController)
+
 
 var index = require('./routes/index');
 app.use('/', index);
