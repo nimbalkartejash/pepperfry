@@ -765,7 +765,7 @@
                         <h5>My Wishlist</h5>
                     </a></div>
                 <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
-                        <h5>My Wollet</h5>
+                        <h5>My Wallet</h5>
                     </a></div>
                 <div class="profile_drop2_div"><a href="" class="profile_drop2_a">
                         <h5>My Profile</h5>
@@ -988,40 +988,7 @@
             </div>
             <div>
                 <div class="log_cancel"><i class="far fa-2x fa-window-close" id="log_cancel"></i></div>
-                <form action="">
-                    <div class="log_margin">
-                        <label for="name" class="log_lable">Name</label><br>
-                        <input type="text" name="name" autocomplete="off" required class="log_input">
-
-
-                    </div>
-                    <div class="log_margin" style="display: flex;">
-                        <div>
-                            <label for="">Mobile Number</label><br>
-                            <input type="number" class="log_input">
-                        </div>
-
-                        <div>
-                            <div class="home-reg-otp-initial">
-                                <a href="" class="">Verify with OTP</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="log_margin">
-                        <label for="">Email ID</label><br>
-                        <input type="email" class="log_input">
-                    </div>
-                    <div class="log_margin">
-                        <label for="">Password</label><br>
-                        <input type="password" class="log_input">
-                    </div>
-                    <div class="log_margin">
-                        <button class="log_register">REGISTER</button>
-
-                    </div>
-
-                </form>
-
+                
                 <div>
                     <span class="font-12 pf-text-dark-grey pf-center">By registering you agree to our <a
                             href="https://www.pepperfry.com/terms-of-use.html" target="_BLANK"
@@ -1050,19 +1017,19 @@
 
             var item2 = document.getElementById('profile_button');
 
-            async function userdata (){
+            async function userdata() {
                 const res = await fetch("http://localhost:3000/profile")
                 const data = await res.json()
-                return data
+                return data;
             }
 
             async function login1() {
-                var it =await userdata();
+                var it = await userdata();
                 console.log(it);
-                localStorage.setItem("login",JSON.stringify(it));
+                localStorage.setItem("login", JSON.stringify(it));
                 login.style.display = "none";
             }
-            logo.addEventListener("click", login1());
+            login.addEventListener("click", login1);
 
             var storage_item = localStorage.getItem("login");
 
@@ -1225,7 +1192,7 @@
 
     <script>
         let right_cont = document.getElementById("right");
-//-------------------fetching api from backend from my local system----------------------
+        //-------------------fetching api from backend from my local system----------------------
         async function items() {
             const res = await fetch("http://localhost:3000/products/")
             const data = await res.json();
@@ -1236,7 +1203,7 @@
         var i = 0;
         async function showItems() {
 
-            const product_items =await items()
+            const product_items = await items()
             console.log(product_items);
 
             product_items.forEach(function (product) {
@@ -1362,9 +1329,12 @@
         var cart_data = JSON.parse(localStorage.getItem("cart"));
 
         function addtoCart(p) {
-            show1();
             openCart()
+            show1();
+
+            cart_data.push(p)
             localStorage.setItem("cart", JSON.stringify(cart_data))
+            
 
         }
 
@@ -1780,59 +1750,7 @@
 
 
                 let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
-                let wish_content = document.getElementById("wish_content");
 
-                wishlist_data.forEach(function (product) {
-
-
-                    let pop_pro_div = document.createElement("div");
-                    pop_pro_div.setAttribute("class", "pop_product");
-
-                    let img_div = document.createElement("div");
-                    img_div.setAttribute("class", "pop_imgs");
-                    let popImage = document.createElement("img");
-                    popImage.src = product.url;
-                    img_div.append(popImage);
-
-                    let p_name = document.createElement("p");
-                    p_name.innerText = product.name + " " + product.brand + "...";
-                    p_name.setAttribute("class", "prod_bold")
-
-                    let retail_price = document.createElement("div");
-                    let retail_price1 = document.createElement("div");
-                    let retail_price2 = document.createElement("div");
-                    retail_price1.innerHTML = "Retail Price ";
-                    retail_price2.innerHTML = "₹ " + product.price;
-                    retail_price.append(retail_price1, retail_price2);
-                    retail_price2.setAttribute("style", "padding-left:40px;text-decoration:line-through;");
-                    retail_price.setAttribute("style", "display:flex");
-                    retail_price.setAttribute("class", "gray_small opx");
-
-                    let p_price_d = document.createElement("div");
-                    let p_price_d1 = document.createElement("div");
-                    let p_price_d2 = document.createElement("div");
-                    p_price_d1.innerHTML = "Offer Price";
-                    p_price_d2.innerHTML = "₹ " + product.netPrice;
-                    p_price_d.append(p_price_d1, p_price_d2);
-                    p_price_d2.setAttribute("style", "padding-left:40px;font-weight:600;color:black;");
-                    p_price_d.setAttribute("style", "display:flex");
-                    p_price_d.setAttribute("class", "gray_small opx");
-
-                    let moveMain = document.createElement("div");
-                    let move_to1 = document.createElement("p");
-                    let move_to = document.createElement("p");
-                    move_to1.innerText = "Add to cart";
-                    move_to.innerText = "Remove   ";
-                    moveMain.append(move_to1, move_to);
-                    move_to1.setAttribute("class", "gray_small leftff");
-                    move_to1.setAttribute("style", "margin-left:80px;text-decoration: underline;margin-top:16px;");
-                    move_to.setAttribute("style", "text-decoration: underline;margin-top:16px;")
-                    move_to.setAttribute("class", "gray_small leftff");
-                    moveMain.setAttribute("class", "leftff");
-
-                    pop_pro_div.append(img_div, p_name, retail_price, p_price_d, moveMain);
-                    wish_content.append(pop_pro_div);
-                });
 
                 document.getElementById("wish_content").style.display = "block";
 
@@ -1860,73 +1778,67 @@
 
             document.getElementById("cart_content").style.display = "none";
         }
+        function wishlist_show() {
+            let wish_content = document.getElementById("wish_content");
+
+            wishlist_data.forEach(function (product) {
+
+
+                let pop_pro_div = document.createElement("div");
+                pop_pro_div.setAttribute("class", "pop_product");
+
+                let img_div = document.createElement("div");
+                img_div.setAttribute("class", "pop_imgs");
+                let popImage = document.createElement("img");
+                popImage.src = product.url;
+                img_div.append(popImage);
+
+                let p_name = document.createElement("p");
+                p_name.innerText = product.name + " " + product.brand + "...";
+                p_name.setAttribute("class", "prod_bold")
+
+                let retail_price = document.createElement("div");
+                let retail_price1 = document.createElement("div");
+                let retail_price2 = document.createElement("div");
+                retail_price1.innerHTML = "Retail Price ";
+                retail_price2.innerHTML = "₹ " + product.price;
+                retail_price.append(retail_price1, retail_price2);
+                retail_price2.setAttribute("style", "padding-left:40px;text-decoration:line-through;");
+                retail_price.setAttribute("style", "display:flex");
+                retail_price.setAttribute("class", "gray_small opx");
+
+                let p_price_d = document.createElement("div");
+                let p_price_d1 = document.createElement("div");
+                let p_price_d2 = document.createElement("div");
+                p_price_d1.innerHTML = "Offer Price";
+                p_price_d2.innerHTML = "₹ " + product.netPrice;
+                p_price_d.append(p_price_d1, p_price_d2);
+                p_price_d2.setAttribute("style", "padding-left:40px;font-weight:600;color:black;");
+                p_price_d.setAttribute("style", "display:flex");
+                p_price_d.setAttribute("class", "gray_small opx");
+
+                let moveMain = document.createElement("div");
+                let move_to1 = document.createElement("p");
+                let move_to = document.createElement("p");
+                move_to1.innerText = "Add to cart";
+                move_to.innerText = "Remove   ";
+                moveMain.append(move_to1, move_to);
+                move_to1.setAttribute("class", "gray_small leftff");
+                move_to1.setAttribute("style", "margin-left:80px;text-decoration: underline;margin-top:16px;");
+                move_to.setAttribute("style", "text-decoration: underline;margin-top:16px;")
+                move_to.setAttribute("class", "gray_small leftff");
+                moveMain.setAttribute("class", "leftff");
+
+                pop_pro_div.append(img_div, p_name, retail_price, p_price_d, moveMain);
+                wish_content.append(pop_pro_div);
+            });
+        }
+        wishlist_show()
 
         function openCart() {
             let cart_data = JSON.parse(localStorage.getItem("cart"));
             if (cart_data.length > 0) {
-
-                let cart_data = JSON.parse(localStorage.getItem("cart"));
-                var cart_content = document.getElementById("cart_content");
-
-                cart_data.forEach(function (product) {
-
-
-                    let pop_pro_div = document.createElement("div");
-                    pop_pro_div.setAttribute("class", "pop_product");
-
-                    let img_div = document.createElement("div");
-                    img_div.setAttribute("class", "pop_imgs");
-                    let popImage = document.createElement("img");
-                    popImage.src = product.url;
-                    img_div.append(popImage);
-
-                    let p_name = document.createElement("p");
-                    p_name.innerText = product.name + " " + product.brand + "...";
-                    p_name.setAttribute("class", "prod_bold")
-
-                    let retail_price = document.createElement("div");
-                    let retail_price1 = document.createElement("div");
-                    let retail_price2 = document.createElement("div");
-                    retail_price1.innerHTML = "Retail Price ";
-                    retail_price2.innerHTML = "₹ " + product.price;
-                    retail_price.append(retail_price1, retail_price2);
-                    retail_price2.setAttribute("style", "padding-left:40px;text-decoration:line-through;");
-                    retail_price.setAttribute("style", "display:flex");
-                    retail_price.setAttribute("class", "gray_small opx");
-
-                    let p_price_d = document.createElement("div");
-                    let p_price_d1 = document.createElement("div");
-                    let p_price_d2 = document.createElement("div");
-                    p_price_d1.innerHTML = "Offer Price";
-                    p_price_d2.innerHTML = "₹ " + product.netPrice;
-                    p_price_d.append(p_price_d1, p_price_d2);
-                    p_price_d2.setAttribute("style", "padding-left:40px;font-weight:600;color:black;");
-                    p_price_d.setAttribute("style", "display:flex");
-                    p_price_d.setAttribute("class", "gray_small opx");
-
-                    let moveMain = document.createElement("div");
-                    let move_to1 = document.createElement("p");
-                    let move_to = document.createElement("p");
-                    move_to1.innerText = "Move To Wishlist   ";
-                    move_to.innerText = "Remove   ";
-                    moveMain.append(move_to1, move_to);
-                    move_to1.setAttribute("class", "gray_small leftff");
-                    move_to1.setAttribute("style", "margin-left:80px;text-decoration: underline;margin-top:16px;");
-                    move_to.setAttribute("style", "text-decoration: underline;margin-top:16px;")
-                    move_to.setAttribute("class", "gray_small leftff");
-                    moveMain.setAttribute("class", "leftff");
-
-                    pop_pro_div.append(img_div, p_name, retail_price, p_price_d, moveMain);
-                    cart_content.append(pop_pro_div);
-
-                });
-
-
-
                 document.getElementById("cart_content").style.display = "block";
-
-
-
             } else {
                 document.getElementById("emptCart_div").style.display = "block";
                 document.getElementById("cart_count").style.display = "none";
@@ -1950,9 +1862,67 @@
 
             document.getElementById("cart_count").style.background = "#f16521";
             document.getElementById("cart_count").style.color = "#fff";
+        }
 
+        function cartShow() {
+            let cart_data = JSON.parse(localStorage.getItem("cart"));
+            var cart_content = document.getElementById("cart_content");
+
+            cart_data.forEach(function (product) {
+
+
+                let pop_pro_div = document.createElement("div");
+                pop_pro_div.setAttribute("class", "pop_product");
+
+                let img_div = document.createElement("div");
+                img_div.setAttribute("class", "pop_imgs");
+                let popImage = document.createElement("img");
+                popImage.src = product.url;
+                img_div.append(popImage);
+
+                let p_name = document.createElement("p");
+                p_name.innerText = product.name + " " + product.brand + "...";
+                p_name.setAttribute("class", "prod_bold")
+
+                let retail_price = document.createElement("div");
+                let retail_price1 = document.createElement("div");
+                let retail_price2 = document.createElement("div");
+                retail_price1.innerHTML = "Retail Price ";
+                retail_price2.innerHTML = "₹ " + product.price;
+                retail_price.append(retail_price1, retail_price2);
+                retail_price2.setAttribute("style", "padding-left:40px;text-decoration:line-through;");
+                retail_price.setAttribute("style", "display:flex");
+                retail_price.setAttribute("class", "gray_small opx");
+
+                let p_price_d = document.createElement("div");
+                let p_price_d1 = document.createElement("div");
+                let p_price_d2 = document.createElement("div");
+                p_price_d1.innerHTML = "Offer Price";
+                p_price_d2.innerHTML = "₹ " + product.netPrice;
+                p_price_d.append(p_price_d1, p_price_d2);
+                p_price_d2.setAttribute("style", "padding-left:40px;font-weight:600;color:black;");
+                p_price_d.setAttribute("style", "display:flex");
+                p_price_d.setAttribute("class", "gray_small opx");
+
+                let moveMain = document.createElement("div");
+                let move_to1 = document.createElement("p");
+                let move_to = document.createElement("p");
+                move_to1.innerText = "Move To Wishlist   ";
+                move_to.innerText = "Remove   ";
+                moveMain.append(move_to1, move_to);
+                move_to1.setAttribute("class", "gray_small leftff");
+                move_to1.setAttribute("style", "margin-left:80px;text-decoration: underline;margin-top:16px;");
+                move_to.setAttribute("style", "text-decoration: underline;margin-top:16px;")
+                move_to.setAttribute("class", "gray_small leftff");
+                moveMain.setAttribute("class", "leftff");
+
+                pop_pro_div.append(img_div, p_name, retail_price, p_price_d, moveMain);
+                cart_content.append(pop_pro_div);
+
+            });
 
         }
+        cartShow()
 
         function count() {
             let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
@@ -1965,9 +1935,6 @@
             }
 
         }
-
-
-
         {
             let wishlist_data = JSON.parse(localStorage.getItem("wishlist"));
             let cart_data = JSON.parse(localStorage.getItem("cart"));
